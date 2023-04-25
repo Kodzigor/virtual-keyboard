@@ -225,6 +225,25 @@ const data = [
       addClass: 'backspace'
     },
 
+  ],
+  [
+    {
+      name: 'backspace',
+      eng: {
+        caseDown: 'Backspace',
+        caseUp: 'Backspace',
+        caseCaps: 'Backspace',
+        caseCapsShift: 'Backspace'
+      },
+      ukr: {
+        caseDown: "Backspace",
+        caseUp: 'Backspace',
+        caseCaps: "Backspace",
+        caseCapsShift: 'Backspace'
+      },
+      addClass: 'backspace'
+    },
+
   ]
 
 ]

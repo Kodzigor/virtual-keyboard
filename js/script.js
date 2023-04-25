@@ -16,7 +16,18 @@ function createKeyboard() {
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard')
   container.append(keyboard)
+  createKeyboardRow(data, keyboard)
 
 }
 
 createKeyboard()
+
+function createKeyboardRow(array, parenElement) {
+  array.forEach(el => {
+    const keyboardRow = document.createElement('div');
+    keyboardRow.classList.add('keyboard-row');
+    parenElement.append(keyboardRow);
+
+  });
+
+}
