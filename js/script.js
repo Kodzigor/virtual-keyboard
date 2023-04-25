@@ -50,10 +50,10 @@ function createKeyboardKeys(array, parentRow) {
       key.innerHTML = `
       <div class="keyboard-key ${subEl.addClass}">
           <span class="eng hidden">
-            <span class="case-down hidden">${subEl.caseDown}</span>
-            <span class="case-up hidden">${subEl.ukr.caseUp}</span>
-            <span class="case-caps hidden">${subEl.ukr.caseCaps}</span>
-            <span class="case-capsShift hidden">${subEl.ukr.caseCapsShift}</span>
+            <span class="case-down hidden">${subEl.eng.caseDown}</span>
+            <span class="case-up hidden">${subEl.eng.caseUp}</span>
+            <span class="case-caps hidden">${subEl.eng.caseCaps}</span>
+            <span class="case-capsShift hidden">${subEl.eng.caseCapsShift}</span>
           </span>
           <span class="ukr">
             <span class="case-down">${subEl.ukr.caseDown}</span>

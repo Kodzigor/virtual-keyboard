@@ -228,20 +228,36 @@ const data = [
   ],
   [
     {
-      name: 'backspace',
+      name: 'tab',
       eng: {
-        caseDown: 'Backspace',
-        caseUp: 'Backspace',
-        caseCaps: 'Backspace',
-        caseCapsShift: 'Backspace'
+        caseDown: 'Tab',
+        caseUp: 'Tab',
+        caseCaps: 'Tab',
+        caseCapsShift: 'Tab'
       },
       ukr: {
-        caseDown: "Backspace",
-        caseUp: 'Backspace',
-        caseCaps: "Backspace",
-        caseCapsShift: 'Backspace'
+        caseDown: "Tab",
+        caseUp: 'Tab',
+        caseCaps: "Tab",
+        caseCapsShift: 'Tab'
       },
-      addClass: 'backspace'
+      addClass: 'tab'
+    },
+    {
+      name: 'keyQ',
+      eng: {
+        caseDown: 'q',
+        caseUp: 'Q',
+        caseCaps: 'q',
+        caseCapsShift: 'Q'
+      },
+      ukr: {
+        caseDown: "й",
+        caseUp: 'Й',
+        caseCaps: "й",
+        caseCapsShift: 'Й'
+      },
+      addClass: 'keyQ'
     },
 
   ]
