@@ -663,6 +663,216 @@ const data = [
       addClass: 'Enter'
     },
   ],
+  [
+    {
+      name: 'Shift',
+      eng: {
+        caseDown: 'Shift',
+        caseUp: 'Shift',
+        caseCaps: 'Shift',
+        caseCapsShift: 'Shift'
+      },
+      ukr: {
+        caseDown: "Shift",
+        caseUp: 'Shift',
+        caseCaps: "Shift",
+        caseCapsShift: 'Shift'
+      },
+      addClass: 'ShiftLeft'
+    },
+    {
+      name: 'KeyZ',
+      eng: {
+        caseDown: 'z',
+        caseUp: 'Z',
+        caseCaps: 'z',
+        caseCapsShift: 'Z'
+      },
+      ukr: {
+        caseDown: "я",
+        caseUp: 'Я',
+        caseCaps: "я",
+        caseCapsShift: 'Я'
+      },
+      addClass: 'KeyZ'
+    },
+    {
+      name: 'KeyX',
+      eng: {
+        caseDown: 'x',
+        caseUp: 'X',
+        caseCaps: 'x',
+        caseCapsShift: 'X'
+      },
+      ukr: {
+        caseDown: "ч",
+        caseUp: 'Ч',
+        caseCaps: "ч",
+        caseCapsShift: 'Ч'
+      },
+      addClass: 'KeyX'
+    },
+    {
+      name: 'KeyС',
+      eng: {
+        caseDown: 'с',
+        caseUp: 'С',
+        caseCaps: 'с',
+        caseCapsShift: 'С'
+      },
+      ukr: {
+        caseDown: "c",
+        caseUp: 'C',
+        caseCaps: "c",
+        caseCapsShift: 'C'
+      },
+      addClass: 'KeyС'
+    },
+    {
+      name: 'KeyV',
+      eng: {
+        caseDown: 'v',
+        caseUp: 'V',
+        caseCaps: 'v',
+        caseCapsShift: 'V'
+      },
+      ukr: {
+        caseDown: "м",
+        caseUp: 'М',
+        caseCaps: "м",
+        caseCapsShift: 'М'
+      },
+      addClass: 'KeyV'
+    },
+    {
+      name: 'KeyB',
+      eng: {
+        caseDown: 'b',
+        caseUp: 'B',
+        caseCaps: 'b',
+        caseCapsShift: 'B'
+      },
+      ukr: {
+        caseDown: "и",
+        caseUp: 'И',
+        caseCaps: "и",
+        caseCapsShift: 'И'
+      },
+      addClass: 'KeyB'
+    },
+    {
+      name: 'KeyN',
+      eng: {
+        caseDown: 'n',
+        caseUp: 'N',
+        caseCaps: 'n',
+        caseCapsShift: 'N'
+      },
+      ukr: {
+        caseDown: "т",
+        caseUp: 'Т',
+        caseCaps: "т",
+        caseCapsShift: 'Т'
+      },
+      addClass: 'KeyN'
+    },
+    {
+      name: 'KeyM',
+      eng: {
+        caseDown: 'm',
+        caseUp: 'M',
+        caseCaps: 'm',
+        caseCapsShift: 'M'
+      },
+      ukr: {
+        caseDown: "Ь",
+        caseUp: 'ь',
+        caseCaps: "Ь",
+        caseCapsShift: 'ь'
+      },
+      addClass: 'KeyM'
+    },
+    {
+      name: 'Comma',
+      eng: {
+        caseDown: ',',
+        caseUp: '<',
+        caseCaps: ',',
+        caseCapsShift: '<'
+      },
+      ukr: {
+        caseDown: "б",
+        caseUp: 'Б',
+        caseCaps: "б",
+        caseCapsShift: 'Б'
+      },
+      addClass: 'Comma'
+    },
+    {
+      name: 'Period',
+      eng: {
+        caseDown: '>',
+        caseUp: '.',
+        caseCaps: '>',
+        caseCapsShift: '.'
+      },
+      ukr: {
+        caseDown: "Ю",
+        caseUp: 'ю',
+        caseCaps: "Ю",
+        caseCapsShift: 'ю'
+      },
+      addClass: 'Period'
+    },
+    {
+      name: 'Slash',
+      eng: {
+        caseDown: '?',
+        caseUp: '/',
+        caseCaps: '?',
+        caseCapsShift: '/'
+      },
+      ukr: {
+        caseDown: ",",
+        caseUp: '.',
+        caseCaps: ",",
+        caseCapsShift: '.'
+      },
+      addClass: 'Slash'
+    },
+    {
+      name: 'ArrowUp',
+      eng: {
+        caseDown: `▲`,
+        caseUp: `▲`,
+        caseCaps: `▲`,
+        caseCapsShift: `▲`
+      },
+      ukr: {
+        caseDown: "▲",
+        caseUp: '▲',
+        caseCaps: "▲",
+        caseCapsShift: '▲'
+      },
+      addClass: 'ArrowUp'
+    },
+    {
+      name: 'Shift',
+      eng: {
+        caseDown: 'Shift',
+        caseUp: 'Shift',
+        caseCaps: 'Shift',
+        caseCapsShift: 'Shift'
+      },
+      ukr: {
+        caseDown: "Shift",
+        caseUp: 'Shift',
+        caseCaps: "Shift",
+        caseCapsShift: 'Shift'
+      },
+      addClass: 'ShiftRight'
+    },
+  ],
 
 ]
 

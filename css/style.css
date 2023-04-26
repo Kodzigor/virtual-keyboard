@@ -91,6 +91,14 @@ p {
   width: 145px;
 }
 
+.ShiftLeft {
+  width: 135px;
+}
+
+.ShiftRight {
+  width: 110px;
+}
+
 .hidden {
   display: none;
 }
