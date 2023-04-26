@@ -1,7 +1,7 @@
 const data = [
   [
     {
-      name: 'backquote',
+      name: 'Backquote',
       eng: {
         caseDown: '`',
         caseUp: '~',
@@ -14,10 +14,10 @@ const data = [
         caseCaps: "'",
         caseCapsShift: '₴'
       },
-      addClass: 'backquote'
+      addClass: 'Backquote'
     },
     {
-      name: 'digit1',
+      name: 'Digit1',
       eng: {
         caseDown: '1',
         caseUp: '!',
@@ -30,10 +30,10 @@ const data = [
         caseCaps: "1",
         caseCapsShift: '!'
       },
-      addClass: 'digit1'
+      addClass: 'Digit1'
     },
     {
-      name: 'digit2',
+      name: 'Digit2',
       eng: {
         caseDown: '2',
         caseUp: '@',
@@ -46,10 +46,10 @@ const data = [
         caseCaps: "2",
         caseCapsShift: '"'
       },
-      addClass: 'digit2'
+      addClass: 'Digit2'
     },
     {
-      name: 'digit3',
+      name: 'Digit3',
       eng: {
         caseDown: '3',
         caseUp: '#',
@@ -62,10 +62,10 @@ const data = [
         caseCaps: "3",
         caseCapsShift: '№'
       },
-      addClass: 'digit3'
+      addClass: 'Digit3'
     },
     {
-      name: 'digit4',
+      name: 'Digit4',
       eng: {
         caseDown: '4',
         caseUp: '$',
@@ -78,10 +78,10 @@ const data = [
         caseCaps: "4",
         caseCapsShift: ';'
       },
-      addClass: 'digit4'
+      addClass: 'Digit4'
     },
     {
-      name: 'digit5',
+      name: 'Digit5',
       eng: {
         caseDown: '5',
         caseUp: '%',
@@ -94,10 +94,10 @@ const data = [
         caseCaps: "5",
         caseCapsShift: '%'
       },
-      addClass: 'digit5'
+      addClass: 'Digit5'
     },
     {
-      name: 'digit6',
+      name: 'Digit6',
       eng: {
         caseDown: '6',
         caseUp: '^',
@@ -110,10 +110,10 @@ const data = [
         caseCaps: "6",
         caseCapsShift: ':'
       },
-      addClass: 'digit6'
+      addClass: 'Digit6'
     },
     {
-      name: 'digit7',
+      name: 'Digit7',
       eng: {
         caseDown: '7',
         caseUp: '&',
@@ -126,10 +126,10 @@ const data = [
         caseCaps: "7",
         caseCapsShift: '?'
       },
-      addClass: 'digit7'
+      addClass: 'Digit7'
     },
     {
-      name: 'digit8',
+      name: 'Digit8',
       eng: {
         caseDown: '8',
         caseUp: '*',
@@ -142,10 +142,10 @@ const data = [
         caseCaps: "8",
         caseCapsShift: '*'
       },
-      addClass: 'digit8'
+      addClass: 'Digit8'
     },
     {
-      name: 'digit9',
+      name: 'Digit9',
       eng: {
         caseDown: '9',
         caseUp: '(',
@@ -158,10 +158,10 @@ const data = [
         caseCaps: "9",
         caseCapsShift: '('
       },
-      addClass: 'digit9'
+      addClass: 'Digit9'
     },
     {
-      name: 'digit0',
+      name: 'Digit0',
       eng: {
         caseDown: '0',
         caseUp: ')',
@@ -174,10 +174,10 @@ const data = [
         caseCaps: "0",
         caseCapsShift: ')'
       },
-      addClass: 'digit0'
+      addClass: 'Digit0'
     },
     {
-      name: 'minus',
+      name: 'Minus',
       eng: {
         caseDown: '-',
         caseUp: '_',
@@ -190,10 +190,10 @@ const data = [
         caseCaps: "-",
         caseCapsShift: '_'
       },
-      addClass: 'minus'
+      addClass: 'Minus'
     },
     {
-      name: 'plus',
+      name: 'Equal',
       eng: {
         caseDown: '=',
         caseUp: '+',
@@ -206,10 +206,10 @@ const data = [
         caseCaps: "=",
         caseCapsShift: '+'
       },
-      addClass: 'plus'
+      addClass: 'Equal'
     },
     {
-      name: 'backspace',
+      name: 'Backspace',
       eng: {
         caseDown: 'Backspace',
         caseUp: 'Backspace',
@@ -222,13 +222,13 @@ const data = [
         caseCaps: "Backspace",
         caseCapsShift: 'Backspace'
       },
-      addClass: 'backspace'
+      addClass: 'Backspace'
     },
 
   ],
   [
     {
-      name: 'tab',
+      name: 'Tab',
       eng: {
         caseDown: 'Tab',
         caseUp: 'Tab',
@@ -241,10 +241,10 @@ const data = [
         caseCaps: "Tab",
         caseCapsShift: 'Tab'
       },
-      addClass: 'tab'
+      addClass: 'Tab'
     },
     {
-      name: 'keyQ',
+      name: 'KeyQ',
       eng: {
         caseDown: 'q',
         caseUp: 'Q',
@@ -257,7 +257,199 @@ const data = [
         caseCaps: "й",
         caseCapsShift: 'Й'
       },
-      addClass: 'keyQ'
+      addClass: 'KeyQ'
+    },
+    {
+      name: 'KeyW',
+      eng: {
+        caseDown: 'w',
+        caseUp: 'W',
+        caseCaps: 'w',
+        caseCapsShift: 'W'
+      },
+      ukr: {
+        caseDown: "ц",
+        caseUp: 'Ц',
+        caseCaps: "ц",
+        caseCapsShift: 'Ц'
+      },
+      addClass: 'KeyW'
+    },
+    {
+      name: 'KeyE',
+      eng: {
+        caseDown: 'e',
+        caseUp: 'E',
+        caseCaps: 'e',
+        caseCapsShift: 'E'
+      },
+      ukr: {
+        caseDown: "у",
+        caseUp: 'У',
+        caseCaps: "у",
+        caseCapsShift: 'У'
+      },
+      addClass: 'KeyE'
+    },
+    {
+      name: 'KeyR',
+      eng: {
+        caseDown: 'r',
+        caseUp: 'R',
+        caseCaps: 'r',
+        caseCapsShift: 'R'
+      },
+      ukr: {
+        caseDown: "к",
+        caseUp: 'К',
+        caseCaps: "к",
+        caseCapsShift: 'К'
+      },
+      addClass: 'KeyR'
+    },
+    {
+      name: 'KeyT',
+      eng: {
+        caseDown: 't',
+        caseUp: 'T',
+        caseCaps: 't',
+        caseCapsShift: 'T'
+      },
+      ukr: {
+        caseDown: "е",
+        caseUp: 'Е',
+        caseCaps: "е",
+        caseCapsShift: 'Е'
+      },
+      addClass: 'KeyT'
+    },
+    {
+      name: 'KeyY',
+      eng: {
+        caseDown: 'y',
+        caseUp: 'Y',
+        caseCaps: 'y',
+        caseCapsShift: 'Y'
+      },
+      ukr: {
+        caseDown: "н",
+        caseUp: 'Н',
+        caseCaps: "н",
+        caseCapsShift: 'Н'
+      },
+      addClass: 'KeyY'
+    },
+    {
+      name: 'KeyU',
+      eng: {
+        caseDown: 'u',
+        caseUp: 'U',
+        caseCaps: 'u',
+        caseCapsShift: 'U'
+      },
+      ukr: {
+        caseDown: "г",
+        caseUp: 'Г',
+        caseCaps: "г",
+        caseCapsShift: 'Г'
+      },
+      addClass: 'KeyU'
+    },
+    {
+      name: 'KeyI',
+      eng: {
+        caseDown: 'i',
+        caseUp: 'I',
+        caseCaps: 'i',
+        caseCapsShift: 'I'
+      },
+      ukr: {
+        caseDown: "ш",
+        caseUp: 'Ш',
+        caseCaps: "ш",
+        caseCapsShift: 'Ш'
+      },
+      addClass: 'KeyI'
+    },
+    {
+      name: 'KeyO',
+      eng: {
+        caseDown: 'o',
+        caseUp: 'O',
+        caseCaps: 'o',
+        caseCapsShift: 'O'
+      },
+      ukr: {
+        caseDown: "щ",
+        caseUp: 'Щ',
+        caseCaps: "щ",
+        caseCapsShift: 'Щ'
+      },
+      addClass: 'KeyO'
+    },
+    {
+      name: 'KeyP',
+      eng: {
+        caseDown: 'p',
+        caseUp: 'P',
+        caseCaps: 'p',
+        caseCapsShift: 'P'
+      },
+      ukr: {
+        caseDown: "з",
+        caseUp: 'З',
+        caseCaps: "з",
+        caseCapsShift: 'З'
+      },
+      addClass: 'KeyP'
+    },
+    {
+      name: 'BracketLeft',
+      eng: {
+        caseDown: '[',
+        caseUp: '{',
+        caseCaps: '[',
+        caseCapsShift: '{'
+      },
+      ukr: {
+        caseDown: "х",
+        caseUp: 'Х',
+        caseCaps: "х",
+        caseCapsShift: 'Х'
+      },
+      addClass: 'BracketLeft'
+    },
+    {
+      name: 'BracketRight',
+      eng: {
+        caseDown: ']',
+        caseUp: '}',
+        caseCaps: ']',
+        caseCapsShift: '}'
+      },
+      ukr: {
+        caseDown: "ї",
+        caseUp: 'Ї',
+        caseCaps: "ї",
+        caseCapsShift: 'Ї'
+      },
+      addClass: 'BracketRight'
+    },
+    {
+      name: 'Backslash',
+      eng: {
+        caseDown: "\\",
+        caseUp: '|',
+        caseCaps: "\\",
+        caseCapsShift: '|'
+      },
+      ukr: {
+        caseDown: "\\",
+        caseUp: '/',
+        caseCaps: '\\',
+        caseCapsShift: '/'
+      },
+      addClass: 'Backslash'
     },
 
   ]
