@@ -1,6 +1,6 @@
 "use strict";
 
-const container = document.querySelector('.container');
+const body = document.body
 import data from "./data.js";
 
 
@@ -10,10 +10,10 @@ import data from "./data.js";
 function createKeyboard() {
   const display = document.createElement('div');
   display.classList.add('display');
-  container.append(display);
+  body.append(display);
   const keyboard = document.createElement('div');
   keyboard.classList.add('keyboard')
-  container.append(keyboard)
+  body.append(keyboard)
   createKeyboardRow(data, keyboard)
 
   const keyboardRows = document.querySelectorAll('.keyboard-row');
@@ -24,6 +24,18 @@ function createKeyboard() {
 }
 
 createKeyboard()
+
+class Keyboard {
+  constructor() {
+
+  }
+
+  createKeyboardInner() {
+
+  }
+}
+
+new Keyboard().createKeyboardInner()
 
 
 // function create keyboard rows for keyboard
