@@ -873,7 +873,169 @@ const data = [
       addClass: 'ShiftRight'
     },
   ],
+  [
+    {
+      name: 'Ctrl',
+      eng: {
+        caseDown: 'Ctrl',
+        caseUp: 'Ctrl',
+        caseCaps: 'Ctrl',
+        caseCapsShift: 'Ctrl'
+      },
+      ukr: {
+        caseDown: "Ctrl",
+        caseUp: 'Ctrl',
+        caseCaps: "Ctrl",
+        caseCapsShift: 'Ctrl'
+      },
+      addClass: 'ControlLeft'
+    },
+    {
+      name: 'Function',
+      eng: {
+        caseDown: 'Fn',
+        caseUp: 'Fn',
+        caseCaps: 'Fn',
+        caseCapsShift: 'Fn'
+      },
+      ukr: {
+        caseDown: "Fn",
+        caseUp: 'Fn',
+        caseCaps: "Fn",
+        caseCapsShift: 'Fn'
+      },
+      addClass: 'Function'
+    },
+    {
+      name: 'MetaLeft',
+      eng: {
+        caseDown: 'Win',
+        caseUp: 'Win',
+        caseCaps: 'Win',
+        caseCapsShift: 'Win'
+      },
+      ukr: {
+        caseDown: "Win",
+        caseUp: 'Win',
+        caseCaps: "Win",
+        caseCapsShift: 'Win'
+      },
+      addClass: 'MetaLeft'
+    },
 
+    {
+      name: 'AltLeft',
+      eng: {
+        caseDown: 'Alt',
+        caseUp: 'Alt',
+        caseCaps: 'Alt',
+        caseCapsShift: 'Alt'
+      },
+      ukr: {
+        caseDown: "Alt",
+        caseUp: 'Alt',
+        caseCaps: "Alt",
+        caseCapsShift: 'Alt'
+      },
+      addClass: 'AltLeft'
+    },
+    {
+      name: 'Space',
+      eng: {
+        caseDown: '',
+        caseUp: '',
+        caseCaps: '',
+        caseCapsShift: ''
+      },
+      ukr: {
+        caseDown: "",
+        caseUp: '',
+        caseCaps: "",
+        caseCapsShift: ''
+      },
+      addClass: 'Space'
+    },
+    {
+      name: 'AltRight',
+      eng: {
+        caseDown: 'Alt',
+        caseUp: 'Alt',
+        caseCaps: 'Alt',
+        caseCapsShift: 'Alt'
+      },
+      ukr: {
+        caseDown: "Alt",
+        caseUp: 'Alt',
+        caseCaps: "Alt",
+        caseCapsShift: 'Alt'
+      },
+      addClass: 'AltRight'
+    },
+    {
+      name: 'ArrowLeft',
+      eng: {
+        caseDown: '◄',
+        caseUp: '◄',
+        caseCaps: '◄',
+        caseCapsShift: '◄'
+      },
+      ukr: {
+        caseDown: "◄",
+        caseUp: '◄',
+        caseCaps: "◄",
+        caseCapsShift: '◄'
+      },
+      addClass: 'ArrowLeft'
+    },
+    {
+      name: 'ArrowDown',
+      eng: {
+        caseDown: '▼',
+        caseUp: '▼',
+        caseCaps: '▼',
+        caseCapsShift: '▼'
+      },
+      ukr: {
+        caseDown: "▼",
+        caseUp: '▼',
+        caseCaps: "▼",
+        caseCapsShift: '▼'
+      },
+      addClass: 'ArrowDown'
+    },
+    {
+      name: 'ArrowRight',
+      eng: {
+        caseDown: '►',
+        caseUp: '►',
+        caseCaps: '►',
+        caseCapsShift: '►'
+      },
+      ukr: {
+        caseDown: "►",
+        caseUp: '►',
+        caseCaps: "►",
+        caseCapsShift: '►'
+      },
+      addClass: 'ArrowRight'
+    },
+    {
+      name: 'ControlRight',
+      eng: {
+        caseDown: 'Ctrl',
+        caseUp: 'Ctrl',
+        caseCaps: 'Ctrl',
+        caseCapsShift: 'Ctrl'
+      },
+      ukr: {
+        caseDown: 'Ctrl',
+        caseUp: 'Ctrl',
+        caseCaps: 'Ctrl',
+        caseCapsShift: 'Ctrl'
+      },
+      addClass: 'ControlRight'
+    },
+  ],
 ]
 
 export default data;

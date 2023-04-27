@@ -1,10 +1,8 @@
 "use strict";
 
-
 const container = document.querySelector('.container');
 import data from "./data.js";
 
-console.log(data);
 
 
 // function createKeyboard creates keyboard body and display
