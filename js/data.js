@@ -2,1040 +2,781 @@ const data = [
   [
     {
       name: 'Backquote',
-      eng: {
-        caseDown: '`',
-        caseUp: '~',
-        caseCaps: '`',
-        caseCapsShift: '~'
-      },
-      ukr: {
-        caseDown: "'",
-        caseUp: '₴',
-        caseCaps: "'",
-        caseCapsShift: '₴'
-      },
-      addClass: 'Backquote'
+      addClass: 'Backquote',
+      caseCapsEng: '`',
+      caseCapsShiftEng: '~',
+      caseDownEng: '`',
+      caseUpEng: '~',
+      caseCapsUkr: "'",
+      caseCapsShiftUkr: '₴',
+      caseDownUkr: "'",
+      caseUpUkr: '₴',
     },
     {
       name: 'Digit1',
-      eng: {
-        caseDown: '1',
-        caseUp: '!',
-        caseCaps: '1',
-        caseCapsShift: '!'
-      },
-      ukr: {
-        caseDown: "1",
-        caseUp: '!',
-        caseCaps: "1",
-        caseCapsShift: '!'
-      },
-      addClass: 'Digit1'
+      addClass: 'Digit1',
+      caseCapsEng: '1',
+      caseCapsShiftEng: '!',
+      caseDownEng: '1',
+      caseUpEng: '!',
+      caseCapsUkr: '1',
+      caseCapsShiftUkr: '!',
+      caseDownUkr: '1',
+      caseUpUkr: '!',
     },
     {
       name: 'Digit2',
-      eng: {
-        caseDown: '2',
-        caseUp: '@',
-        caseCaps: '2',
-        caseCapsShift: '@'
-      },
-      ukr: {
-        caseDown: "2",
-        caseUp: '"',
-        caseCaps: "2",
-        caseCapsShift: '"'
-      },
-      addClass: 'Digit2'
+      addClass: 'Digit2',
+      caseCapsEng: '2',
+      caseCapsShiftEng: '@',
+      caseDownEng: '2',
+      caseUpEng: '@',
+      caseCapsUkr: '2',
+      caseCapsShiftUkr: '"',
+      caseDownUkr: '2',
+      caseUpUkr: '"',
     },
     {
       name: 'Digit3',
-      eng: {
-        caseDown: '3',
-        caseUp: '#',
-        caseCaps: '3',
-        caseCapsShift: '#'
-      },
-      ukr: {
-        caseDown: "3",
-        caseUp: '№',
-        caseCaps: "3",
-        caseCapsShift: '№'
-      },
-      addClass: 'Digit3'
+      addClass: 'Digit3',
+      caseCapsEng: '3',
+      caseCapsShiftEng: '#',
+      caseDownEng: '3',
+      caseUpEng: '#',
+      caseCapsUkr: '3',
+      caseCapsShiftUkr: '№',
+      caseDownUkr: '3',
+      caseUpUkr: '№',
     },
     {
       name: 'Digit4',
-      eng: {
-        caseDown: '4',
-        caseUp: '$',
-        caseCaps: '4',
-        caseCapsShift: '$'
-      },
-      ukr: {
-        caseDown: "4",
-        caseUp: ';',
-        caseCaps: "4",
-        caseCapsShift: ';'
-      },
-      addClass: 'Digit4'
+      addClass: 'Digit4',
+      caseCapsEng: '4',
+      caseCapsShiftEng: '$',
+      caseDownEng: '4',
+      caseUpEng: '$',
+      caseCapsUkr: '4',
+      caseCapsShiftUkr: ';',
+      caseDownUkr: '4',
+      caseUpUkr: ';',
     },
     {
       name: 'Digit5',
-      eng: {
-        caseDown: '5',
-        caseUp: '%',
-        caseCaps: '5',
-        caseCapsShift: '%'
-      },
-      ukr: {
-        caseDown: "5",
-        caseUp: '%',
-        caseCaps: "5",
-        caseCapsShift: '%'
-      },
-      addClass: 'Digit5'
+      addClass: 'Digit5',
+      caseCapsEng: '5',
+      caseCapsShiftEng: '%',
+      caseDownEng: '5',
+      caseUpEng: '%',
+      caseCapsUkr: '5',
+      caseCapsShiftUkr: '%',
+      caseDownUkr: '5',
+      caseUpUkr: '%',
     },
     {
       name: 'Digit6',
-      eng: {
-        caseDown: '6',
-        caseUp: '^',
-        caseCaps: '6',
-        caseCapsShift: '^'
-      },
-      ukr: {
-        caseDown: "6",
-        caseUp: ':',
-        caseCaps: "6",
-        caseCapsShift: ':'
-      },
-      addClass: 'Digit6'
+      addClass: 'Digit6',
+      caseCapsEng: '6',
+      caseCapsShiftEng: '^',
+      caseDownEng: '6',
+      caseUpEng: '^',
+      caseCapsUkr: '6',
+      caseCapsShiftUkr: ':',
+      caseDownUkr: '6',
+      caseUpUkr: ':',
     },
     {
       name: 'Digit7',
-      eng: {
-        caseDown: '7',
-        caseUp: '&',
-        caseCaps: '7',
-        caseCapsShift: '&'
-      },
-      ukr: {
-        caseDown: "7",
-        caseUp: '?',
-        caseCaps: "7",
-        caseCapsShift: '?'
-      },
-      addClass: 'Digit7'
+      addClass: 'Digit7',
+      caseCapsEng: '7',
+      caseCapsShiftEng: '&',
+      caseDownEng: '7',
+      caseUpEng: '&',
+      caseCapsUkr: '7',
+      caseCapsShiftUkr: '?',
+      caseDownUkr: '7',
+      caseUpUkr: '?',
     },
     {
       name: 'Digit8',
-      eng: {
-        caseDown: '8',
-        caseUp: '*',
-        caseCaps: '8',
-        caseCapsShift: '*'
-      },
-      ukr: {
-        caseDown: "8",
-        caseUp: '*',
-        caseCaps: "8",
-        caseCapsShift: '*'
-      },
-      addClass: 'Digit8'
+      addClass: 'Digit8',
+      caseCapsEng: '8',
+      caseCapsShiftEng: '*',
+      caseDownEng: '8',
+      caseUpEng: '*',
+      caseCapsUkr: '8',
+      caseCapsShiftUkr: '*',
+      caseDownUkr: '8',
+      caseUpUkr: '*',
     },
     {
       name: 'Digit9',
-      eng: {
-        caseDown: '9',
-        caseUp: '(',
-        caseCaps: '9',
-        caseCapsShift: '('
-      },
-      ukr: {
-        caseDown: "9",
-        caseUp: '(',
-        caseCaps: "9",
-        caseCapsShift: '('
-      },
-      addClass: 'Digit9'
+      addClass: 'Digit9',
+      caseCapsEng: '9',
+      caseCapsShiftEng: '(',
+      caseDownEng: '9',
+      caseUpEng: '(',
+      caseCapsUkr: '9',
+      caseCapsShiftUkr: '(',
+      caseDownUkr: '9',
+      caseUpUkr: '(',
     },
     {
       name: 'Digit0',
-      eng: {
-        caseDown: '0',
-        caseUp: ')',
-        caseCaps: '0',
-        caseCapsShift: ')'
-      },
-      ukr: {
-        caseDown: "0",
-        caseUp: ')',
-        caseCaps: "0",
-        caseCapsShift: ')'
-      },
-      addClass: 'Digit0'
+      addClass: 'Digit0',
+      caseCapsEng: '0',
+      caseCapsShiftEng: ')',
+      caseDownEng: '0',
+      caseUpEng: ')',
+      caseCapsUkr: '0',
+      caseCapsShiftUkr: ')',
+      caseDownUkr: '0',
+      caseUpUkr: ')',
     },
     {
       name: 'Minus',
-      eng: {
-        caseDown: '-',
-        caseUp: '_',
-        caseCaps: '-',
-        caseCapsShift: '_'
-      },
-      ukr: {
-        caseDown: "-",
-        caseUp: '_',
-        caseCaps: "-",
-        caseCapsShift: '_'
-      },
-      addClass: 'Minus'
+      addClass: 'Minus',
+      caseCapsEng: '-',
+      caseCapsShiftEng: '_',
+      caseDownEng: '-',
+      caseUpEng: '_',
+      caseCapsUkr: '-',
+      caseCapsShiftUkr: '_',
+      caseDownUkr: '-',
+      caseUpUkr: '_',
     },
     {
       name: 'Equal',
-      eng: {
-        caseDown: '=',
-        caseUp: '+',
-        caseCaps: '=',
-        caseCapsShift: '+'
-      },
-      ukr: {
-        caseDown: "=",
-        caseUp: '+',
-        caseCaps: "=",
-        caseCapsShift: '+'
-      },
-      addClass: 'Equal'
+      addClass: 'Equal',
+      caseCapsEng: '=',
+      caseCapsShiftEng: '+',
+      caseDownEng: '=',
+      caseUpEng: '+',
+      caseCapsUkr: '=',
+      caseCapsShiftUkr: '+',
+      caseDownUkr: '=',
+      caseUpUkr: '+',
     },
     {
       name: 'Backspace',
-      eng: {
-        caseDown: 'Backspace',
-        caseUp: 'Backspace',
-        caseCaps: 'Backspace',
-        caseCapsShift: 'Backspace'
-      },
-      ukr: {
-        caseDown: "Backspace",
-        caseUp: 'Backspace',
-        caseCaps: "Backspace",
-        caseCapsShift: 'Backspace'
-      },
-      addClass: 'Backspace'
+      addClass: 'Backspace',
+      caseCapsEng: 'Backspace',
+      caseCapsShiftEng: 'Backspace',
+      caseDownEng: 'Backspace',
+      caseUpEng: 'Backspace',
+      caseCapsUkr: 'Backspace',
+      caseCapsShiftUkr: 'Backspace',
+      caseDownUkr: 'Backspace',
+      caseUpUkr: 'Backspace',
     },
-
   ],
   [
     {
       name: 'Tab',
-      eng: {
-        caseDown: 'Tab',
-        caseUp: 'Tab',
-        caseCaps: 'Tab',
-        caseCapsShift: 'Tab'
-      },
-      ukr: {
-        caseDown: "Tab",
-        caseUp: 'Tab',
-        caseCaps: "Tab",
-        caseCapsShift: 'Tab'
-      },
-      addClass: 'Tab'
+      addClass: 'Tab',
+      caseCapsEng: 'Tab',
+      caseCapsShiftEng: 'Tab',
+      caseDownEng: 'Tab',
+      caseUpEng: 'Tab',
+      caseCapsUkr: 'Tab',
+      caseCapsShiftUkr: 'Tab',
+      caseDownUkr: 'Tab',
+      caseUpUkr: 'Tab',
     },
     {
       name: 'KeyQ',
-      eng: {
-        caseDown: 'q',
-        caseUp: 'Q',
-        caseCaps: 'q',
-        caseCapsShift: 'Q'
-      },
-      ukr: {
-        caseDown: "й",
-        caseUp: 'Й',
-        caseCaps: "й",
-        caseCapsShift: 'Й'
-      },
-      addClass: 'KeyQ'
+      addClass: 'KeyQ',
+      caseCapsEng: 'q',
+      caseCapsShiftEng: 'Q',
+      caseDownEng: 'q',
+      caseUpEng: 'Q',
+      caseCapsUkr: 'й',
+      caseCapsShiftUkr: 'Й',
+      caseDownUkr: 'й',
+      caseUpUkr: 'Й',
     },
     {
       name: 'KeyW',
-      eng: {
-        caseDown: 'w',
-        caseUp: 'W',
-        caseCaps: 'w',
-        caseCapsShift: 'W'
-      },
-      ukr: {
-        caseDown: "ц",
-        caseUp: 'Ц',
-        caseCaps: "ц",
-        caseCapsShift: 'Ц'
-      },
-      addClass: 'KeyW'
+      addClass: 'KeyW',
+      caseCapsEng: 'w',
+      caseCapsShiftEng: 'W',
+      caseDownEng: 'w',
+      caseUpEng: 'W',
+      caseCapsUkr: 'ц',
+      caseCapsShiftUkr: 'Ц',
+      caseDownUkr: 'ц',
+      caseUpUkr: 'Ц',
     },
     {
       name: 'KeyE',
-      eng: {
-        caseDown: 'e',
-        caseUp: 'E',
-        caseCaps: 'e',
-        caseCapsShift: 'E'
-      },
-      ukr: {
-        caseDown: "у",
-        caseUp: 'У',
-        caseCaps: "у",
-        caseCapsShift: 'У'
-      },
-      addClass: 'KeyE'
+      addClass: 'KeyE',
+      caseCapsEng: 'e',
+      caseCapsShiftEng: 'E',
+      caseDownEng: 'e',
+      caseUpEng: 'E',
+      caseCapsUkr: 'у',
+      caseCapsShiftUkr: 'У',
+      caseDownUkr: 'у',
+      caseUpUkr: 'У',
     },
     {
       name: 'KeyR',
-      eng: {
-        caseDown: 'r',
-        caseUp: 'R',
-        caseCaps: 'r',
-        caseCapsShift: 'R'
-      },
-      ukr: {
-        caseDown: "к",
-        caseUp: 'К',
-        caseCaps: "к",
-        caseCapsShift: 'К'
-      },
-      addClass: 'KeyR'
+      addClass: 'KeyR',
+      caseCapsEng: 'r',
+      caseCapsShiftEng: 'R',
+      caseDownEng: 'r',
+      caseUpEng: 'R',
+      caseCapsUkr: 'к',
+      caseCapsShiftUkr: 'К',
+      caseDownUkr: 'к',
+      caseUpUkr: 'К',
     },
     {
       name: 'KeyT',
-      eng: {
-        caseDown: 't',
-        caseUp: 'T',
-        caseCaps: 't',
-        caseCapsShift: 'T'
-      },
-      ukr: {
-        caseDown: "е",
-        caseUp: 'Е',
-        caseCaps: "е",
-        caseCapsShift: 'Е'
-      },
-      addClass: 'KeyT'
+      addClass: 'KeyT',
+      caseCapsEng: 't',
+      caseCapsShiftEng: 'T',
+      caseDownEng: 't',
+      caseUpEng: 'T',
+      caseCapsUkr: 'е',
+      caseCapsShiftUkr: 'Е',
+      caseDownUkr: 'е',
+      caseUpUkr: 'Е',
     },
     {
       name: 'KeyY',
-      eng: {
-        caseDown: 'y',
-        caseUp: 'Y',
-        caseCaps: 'y',
-        caseCapsShift: 'Y'
-      },
-      ukr: {
-        caseDown: "н",
-        caseUp: 'Н',
-        caseCaps: "н",
-        caseCapsShift: 'Н'
-      },
-      addClass: 'KeyY'
+      addClass: 'KeyY',
+      caseCapsEng: 'y',
+      caseCapsShiftEng: 'Y',
+      caseDownEng: 'y',
+      caseUpEng: 'Y',
+      caseCapsUkr: 'н',
+      caseCapsShiftUkr: 'Н',
+      caseDownUkr: 'н',
+      caseUpUkr: 'Н',
     },
     {
       name: 'KeyU',
-      eng: {
-        caseDown: 'u',
-        caseUp: 'U',
-        caseCaps: 'u',
-        caseCapsShift: 'U'
-      },
-      ukr: {
-        caseDown: "г",
-        caseUp: 'Г',
-        caseCaps: "г",
-        caseCapsShift: 'Г'
-      },
-      addClass: 'KeyU'
+      addClass: 'KeyU',
+      caseCapsEng: 'u',
+      caseCapsShiftEng: 'U',
+      caseDownEng: 'u',
+      caseUpEng: 'U',
+      caseCapsUkr: 'г',
+      caseCapsShiftUkr: 'Г',
+      caseDownUkr: 'г',
+      caseUpUkr: 'Г',
     },
     {
       name: 'KeyI',
-      eng: {
-        caseDown: 'i',
-        caseUp: 'I',
-        caseCaps: 'i',
-        caseCapsShift: 'I'
-      },
-      ukr: {
-        caseDown: "ш",
-        caseUp: 'Ш',
-        caseCaps: "ш",
-        caseCapsShift: 'Ш'
-      },
-      addClass: 'KeyI'
+      addClass: 'KeyI',
+      caseCapsEng: 'i',
+      caseCapsShiftEng: 'I',
+      caseDownEng: 'i',
+      caseUpEng: 'I',
+      caseCapsUkr: 'ш',
+      caseCapsShiftUkr: 'Ш',
+      caseDownUkr: 'ш',
+      caseUpUkr: 'Ш',
     },
     {
       name: 'KeyO',
-      eng: {
-        caseDown: 'o',
-        caseUp: 'O',
-        caseCaps: 'o',
-        caseCapsShift: 'O'
-      },
-      ukr: {
-        caseDown: "щ",
-        caseUp: 'Щ',
-        caseCaps: "щ",
-        caseCapsShift: 'Щ'
-      },
-      addClass: 'KeyO'
+      addClass: 'KeyO',
+      caseCapsEng: 'o',
+      caseCapsShiftEng: 'O',
+      caseDownEng: 'o',
+      caseUpEng: 'O',
+      caseCapsUkr: 'щ',
+      caseCapsShiftUkr: 'Щ',
+      caseDownUkr: 'щ',
+      caseUpUkr: 'Щ',
     },
     {
       name: 'KeyP',
-      eng: {
-        caseDown: 'p',
-        caseUp: 'P',
-        caseCaps: 'p',
-        caseCapsShift: 'P'
-      },
-      ukr: {
-        caseDown: "з",
-        caseUp: 'З',
-        caseCaps: "з",
-        caseCapsShift: 'З'
-      },
-      addClass: 'KeyP'
+      addClass: 'KeyP',
+      caseCapsEng: 'p',
+      caseCapsShiftEng: 'P',
+      caseDownEng: 'p',
+      caseUpEng: 'P',
+      caseCapsUkr: 'з',
+      caseCapsShiftUkr: 'З',
+      caseDownUkr: 'з',
+      caseUpUkr: 'З',
     },
     {
       name: 'BracketLeft',
-      eng: {
-        caseDown: '[',
-        caseUp: '{',
-        caseCaps: '[',
-        caseCapsShift: '{'
-      },
-      ukr: {
-        caseDown: "х",
-        caseUp: 'Х',
-        caseCaps: "х",
-        caseCapsShift: 'Х'
-      },
-      addClass: 'BracketLeft'
+      addClass: 'BracketLeft',
+      caseCapsEng: '[',
+      caseCapsShiftEng: '{',
+      caseDownEng: '[',
+      caseUpEng: '{',
+      caseCapsUkr: 'х',
+      caseCapsShiftUkr: 'Х',
+      caseDownUkr: 'х',
+      caseUpUkr: 'Х',
     },
     {
       name: 'BracketRight',
-      eng: {
-        caseDown: ']',
-        caseUp: '}',
-        caseCaps: ']',
-        caseCapsShift: '}'
-      },
-      ukr: {
-        caseDown: "ї",
-        caseUp: 'Ї',
-        caseCaps: "ї",
-        caseCapsShift: 'Ї'
-      },
-      addClass: 'BracketRight'
+      addClass: 'BracketRight',
+      caseCapsEng: ']',
+      caseCapsShiftEng: '}',
+      caseDownEng: ']',
+      caseUpEng: '}',
+      caseCapsUkr: 'ї',
+      caseCapsShiftUkr: 'Ї',
+      caseDownUkr: 'ї',
+      caseUpUkr: 'Ї',
     },
     {
       name: 'Backslash',
-      eng: {
-        caseDown: "\\",
-        caseUp: '|',
-        caseCaps: "\\",
-        caseCapsShift: '|'
-      },
-      ukr: {
-        caseDown: "\\",
-        caseUp: '/',
-        caseCaps: '\\',
-        caseCapsShift: '/'
-      },
-      addClass: 'Backslash'
+      addClass: 'Backslash',
+      caseCapsEng: '\\',
+      caseCapsShiftEng: '|',
+      caseDownEng: '\\',
+      caseUpEng: '|',
+      caseCapsUkr: '\\',
+      caseCapsShiftUkr: '/',
+      caseDownUkr: '\\',
+      caseUpUkr: '/',
     },
-
   ],
   [
     {
       name: 'CapsLock',
-      eng: {
-        caseDown: 'Caps Lock',
-        caseUp: 'Caps Lock',
-        caseCaps: 'Caps Lock',
-        caseCapsShift: 'Caps Lock'
-      },
-      ukr: {
-        caseDown: "Caps Lock",
-        caseUp: 'Caps Lock',
-        caseCaps: "Caps Lock",
-        caseCapsShift: 'Caps Lock'
-      },
-      addClass: 'CapsLock'
+      addClass: 'CapsLock',
+      caseCapsEng: 'Caps Lock',
+      caseCapsShiftEng: 'Caps Lock',
+      caseDownEng: 'Caps Lock',
+      caseUpEng: 'Caps Lock',
+      caseCapsUkr: 'Caps Lock',
+      caseCapsShiftUkr: 'Caps Lock',
+      caseDownUkr: 'Caps Lock',
+      caseUpUkr: 'Caps Lock',
     },
     {
       name: 'KeyA',
-      eng: {
-        caseDown: 'a',
-        caseUp: 'A',
-        caseCaps: 'a',
-        caseCapsShift: 'A'
-      },
-      ukr: {
-        caseDown: "ф",
-        caseUp: 'Ф',
-        caseCaps: "ф",
-        caseCapsShift: 'Ф'
-      },
-      addClass: 'KeyA'
+      addClass: 'KeyA',
+      caseCapsEng: 'a',
+      caseCapsShiftEng: 'A',
+      caseDownEng: 'a',
+      caseUpEng: 'A',
+      caseCapsUkr: 'ф',
+      caseCapsShiftUkr: 'Ф',
+      caseDownUkr: 'ф',
+      caseUpUkr: 'Ф',
     },
     {
       name: 'KeyS',
-      eng: {
-        caseDown: 's',
-        caseUp: 'S',
-        caseCaps: 's',
-        caseCapsShift: 'S'
-      },
-      ukr: {
-        caseDown: "і",
-        caseUp: 'І',
-        caseCaps: "і",
-        caseCapsShift: 'І'
-      },
-      addClass: 'KeyS'
+      addClass: 'KeyS',
+      caseCapsEng: 's',
+      caseCapsShiftEng: 'S',
+      caseDownEng: 's',
+      caseUpEng: 'S',
+      caseCapsUkr: 'і',
+      caseCapsShiftUkr: 'І',
+      caseDownUkr: 'і',
+      caseUpUkr: 'І',
     },
     {
       name: 'KeyD',
-      eng: {
-        caseDown: 'd',
-        caseUp: 'D',
-        caseCaps: 'd',
-        caseCapsShift: 'D'
-      },
-      ukr: {
-        caseDown: "в",
-        caseUp: 'В',
-        caseCaps: "в",
-        caseCapsShift: 'В'
-      },
-      addClass: 'KeyD'
+      addClass: 'KeyD',
+      caseCapsEng: 'd',
+      caseCapsShiftEng: 'D',
+      caseDownEng: 'd',
+      caseUpEng: 'D',
+      caseCapsUkr: 'в',
+      caseCapsShiftUkr: 'В',
+      caseDownUkr: 'в',
+      caseUpUkr: 'В',
     },
     {
       name: 'KeyF',
-      eng: {
-        caseDown: 'f',
-        caseUp: 'F',
-        caseCaps: 'f',
-        caseCapsShift: 'F'
-      },
-      ukr: {
-        caseDown: "а",
-        caseUp: 'А',
-        caseCaps: "а",
-        caseCapsShift: 'А'
-      },
-      addClass: 'KeyF'
+      addClass: 'KeyF',
+      caseCapsEng: 'f',
+      caseCapsShiftEng: 'F',
+      caseDownEng: 'f',
+      caseUpEng: 'F',
+      caseCapsUkr: 'а',
+      caseCapsShiftUkr: 'А',
+      caseDownUkr: 'а',
+      caseUpUkr: 'А',
     },
     {
       name: 'KeyG',
-      eng: {
-        caseDown: 'g',
-        caseUp: 'G',
-        caseCaps: 'g',
-        caseCapsShift: 'G'
-      },
-      ukr: {
-        caseDown: "п",
-        caseUp: 'П',
-        caseCaps: "п",
-        caseCapsShift: 'П'
-      },
-      addClass: 'KeyG'
+      addClass: 'KeyG',
+      caseCapsEng: 'g',
+      caseCapsShiftEng: 'G',
+      caseDownEng: 'g',
+      caseUpEng: 'G',
+      caseCapsUkr: 'п',
+      caseCapsShiftUkr: 'П',
+      caseDownUkr: 'п',
+      caseUpUkr: 'П',
     },
     {
       name: 'KeyH',
-      eng: {
-        caseDown: 'h',
-        caseUp: 'H',
-        caseCaps: 'h',
-        caseCapsShift: 'H'
-      },
-      ukr: {
-        caseDown: "р",
-        caseUp: 'Р',
-        caseCaps: "р",
-        caseCapsShift: 'Р'
-      },
-      addClass: 'KeyH'
+      addClass: 'KeyH',
+      caseCapsEng: 'h',
+      caseCapsShiftEng: 'H',
+      caseDownEng: 'h',
+      caseUpEng: 'H',
+      caseCapsUkr: 'р',
+      caseCapsShiftUkr: 'Р',
+      caseDownUkr: 'р',
+      caseUpUkr: 'Р',
     },
     {
       name: 'KeyJ',
-      eng: {
-        caseDown: 'j',
-        caseUp: 'J',
-        caseCaps: 'j',
-        caseCapsShift: 'J'
-      },
-      ukr: {
-        caseDown: "о",
-        caseUp: 'О',
-        caseCaps: "о",
-        caseCapsShift: 'О'
-      },
-      addClass: 'KeyJ'
+      addClass: 'KeyJ',
+      caseCapsEng: 'j',
+      caseCapsShiftEng: 'J',
+      caseDownEng: 'j',
+      caseUpEng: 'J',
+      caseCapsUkr: 'о',
+      caseCapsShiftUkr: 'О',
+      caseDownUkr: 'о',
+      caseUpUkr: 'О',
     },
     {
       name: 'KeyK',
-      eng: {
-        caseDown: 'k',
-        caseUp: 'K',
-        caseCaps: 'k',
-        caseCapsShift: 'K'
-      },
-      ukr: {
-        caseDown: "л",
-        caseUp: 'Л',
-        caseCaps: "л",
-        caseCapsShift: 'Л'
-      },
-      addClass: 'KeyK'
+      addClass: 'KeyK',
+      caseCapsEng: 'k',
+      caseCapsShiftEng: 'K',
+      caseDownEng: 'k',
+      caseUpEng: 'K',
+      caseCapsUkr: 'л',
+      caseCapsShiftUkr: 'Л',
+      caseDownUkr: 'л',
+      caseUpUkr: 'Л',
     },
     {
       name: 'KeyL',
-      eng: {
-        caseDown: 'l',
-        caseUp: 'L',
-        caseCaps: 'l',
-        caseCapsShift: 'L'
-      },
-      ukr: {
-        caseDown: "д",
-        caseUp: 'Д',
-        caseCaps: "д",
-        caseCapsShift: 'Д'
-      },
-      addClass: 'KeyL'
+      addClass: 'KeyL',
+      caseCapsEng: 'l',
+      caseCapsShiftEng: 'L',
+      caseDownEng: 'l',
+      caseUpEng: 'L',
+      caseCapsUkr: 'д',
+      caseCapsShiftUkr: 'Д',
+      caseDownUkr: 'д',
+      caseUpUkr: 'Д',
     },
     {
       name: 'Semicolon',
-      eng: {
-        caseDown: ';',
-        caseUp: ':',
-        caseCaps: ';',
-        caseCapsShift: ':'
-      },
-      ukr: {
-        caseDown: "ж",
-        caseUp: 'Ж',
-        caseCaps: "ж",
-        caseCapsShift: 'Ж'
-      },
-      addClass: 'Semicolon'
+      addClass: 'Semicolon',
+      caseCapsEng: ';',
+      caseCapsShiftEng: ':',
+      caseDownEng: ';',
+      caseUpEng: ':',
+      caseCapsUkr: 'ж',
+      caseCapsShiftUkr: 'Ж',
+      caseDownUkr: 'ж',
+      caseUpUkr: 'Ж',
     },
     {
       name: 'Quote',
-      eng: {
-        caseDown: `'`,
-        caseUp: `"`,
-        caseCaps: `'`,
-        caseCapsShift: `"`
-      },
-      ukr: {
-        caseDown: "є",
-        caseUp: 'Є',
-        caseCaps: "є",
-        caseCapsShift: 'Є'
-      },
-      addClass: 'Quote'
+      addClass: 'Quote',
+      caseCapsEng: "'",
+      caseCapsShiftEng: '"',
+      caseDownEng: "'",
+      caseUpEng: '"',
+      caseCapsUkr: 'є',
+      caseCapsShiftUkr: 'Є',
+      caseDownUkr: 'є',
+      caseUpUkr: 'Є',
     },
     {
       name: 'Enter',
-      eng: {
-        caseDown: 'Enter',
-        caseUp: 'Enter',
-        caseCaps: 'Enter',
-        caseCapsShift: 'Enter'
-      },
-      ukr: {
-        caseDown: "Enter",
-        caseUp: 'Enter',
-        caseCaps: "Enter",
-        caseCapsShift: 'Enter'
-      },
-      addClass: 'Enter'
+      addClass: 'Enter',
+      caseCapsEng: 'Enter',
+      caseCapsShiftEng: 'Enter',
+      caseDownEng: 'Enter',
+      caseUpEng: 'Enter',
+      caseCapsUkr: 'Enter',
+      caseCapsShiftUkr: 'Enter',
+      caseDownUkr: 'Enter',
+      caseUpUkr: 'Enter',
     },
   ],
   [
     {
       name: 'Shift',
-      eng: {
-        caseDown: 'Shift',
-        caseUp: 'Shift',
-        caseCaps: 'Shift',
-        caseCapsShift: 'Shift'
-      },
-      ukr: {
-        caseDown: "Shift",
-        caseUp: 'Shift',
-        caseCaps: "Shift",
-        caseCapsShift: 'Shift'
-      },
-      addClass: 'ShiftLeft'
+      addClass: 'ShiftLeft',
+      caseCapsEng: 'Shift',
+      caseCapsShiftEng: 'Shift',
+      caseDownEng: 'Shift',
+      caseUpEng: 'Shift',
+      caseCapsUkr: 'Shift',
+      caseCapsShiftUkr: 'Shift',
+      caseDownUkr: 'Shift',
+      caseUpUkr: 'Shift',
     },
     {
       name: 'KeyZ',
-      eng: {
-        caseDown: 'z',
-        caseUp: 'Z',
-        caseCaps: 'z',
-        caseCapsShift: 'Z'
-      },
-      ukr: {
-        caseDown: "я",
-        caseUp: 'Я',
-        caseCaps: "я",
-        caseCapsShift: 'Я'
-      },
-      addClass: 'KeyZ'
+      addClass: 'KeyZ',
+      caseCapsEng: 'z',
+      caseCapsShiftEng: 'Z',
+      caseDownEng: 'z',
+      caseUpEng: 'Z',
+      caseCapsUkr: 'я',
+      caseCapsShiftUkr: 'Я',
+      caseDownUkr: 'я',
+      caseUpUkr: 'Я',
     },
     {
       name: 'KeyX',
-      eng: {
-        caseDown: 'x',
-        caseUp: 'X',
-        caseCaps: 'x',
-        caseCapsShift: 'X'
-      },
-      ukr: {
-        caseDown: "ч",
-        caseUp: 'Ч',
-        caseCaps: "ч",
-        caseCapsShift: 'Ч'
-      },
-      addClass: 'KeyX'
+      addClass: 'KeyX',
+      caseCapsEng: 'x',
+      caseCapsShiftEng: 'X',
+      caseDownEng: 'x',
+      caseUpEng: 'X',
+      caseCapsUkr: 'ч',
+      caseCapsShiftUkr: 'Ч',
+      caseDownUkr: 'ч',
+      caseUpUkr: 'Ч',
     },
     {
       name: 'KeyС',
-      eng: {
-        caseDown: 'с',
-        caseUp: 'С',
-        caseCaps: 'с',
-        caseCapsShift: 'С'
-      },
-      ukr: {
-        caseDown: "c",
-        caseUp: 'C',
-        caseCaps: "c",
-        caseCapsShift: 'C'
-      },
-      addClass: 'KeyС'
+      addClass: 'KeyС',
+      caseCapsEng: 'с',
+      caseCapsShiftEng: 'С',
+      caseDownEng: 'с',
+      caseUpEng: 'С',
+      caseCapsUkr: 'c',
+      caseCapsShiftUkr: 'C',
+      caseDownUkr: 'c',
+      caseUpUkr: 'C',
     },
     {
       name: 'KeyV',
-      eng: {
-        caseDown: 'v',
-        caseUp: 'V',
-        caseCaps: 'v',
-        caseCapsShift: 'V'
-      },
-      ukr: {
-        caseDown: "м",
-        caseUp: 'М',
-        caseCaps: "м",
-        caseCapsShift: 'М'
-      },
-      addClass: 'KeyV'
+      addClass: 'KeyV',
+      caseCapsEng: 'v',
+      caseCapsShiftEng: 'V',
+      caseDownEng: 'v',
+      caseUpEng: 'V',
+      caseCapsUkr: 'м',
+      caseCapsShiftUkr: 'М',
+      caseDownUkr: 'м',
+      caseUpUkr: 'М',
     },
     {
       name: 'KeyB',
-      eng: {
-        caseDown: 'b',
-        caseUp: 'B',
-        caseCaps: 'b',
-        caseCapsShift: 'B'
-      },
-      ukr: {
-        caseDown: "и",
-        caseUp: 'И',
-        caseCaps: "и",
-        caseCapsShift: 'И'
-      },
-      addClass: 'KeyB'
+      addClass: 'KeyB',
+      caseCapsEng: 'b',
+      caseCapsShiftEng: 'B',
+      caseDownEng: 'b',
+      caseUpEng: 'B',
+      caseCapsUkr: 'и',
+      caseCapsShiftUkr: 'И',
+      caseDownUkr: 'и',
+      caseUpUkr: 'И',
     },
     {
       name: 'KeyN',
-      eng: {
-        caseDown: 'n',
-        caseUp: 'N',
-        caseCaps: 'n',
-        caseCapsShift: 'N'
-      },
-      ukr: {
-        caseDown: "т",
-        caseUp: 'Т',
-        caseCaps: "т",
-        caseCapsShift: 'Т'
-      },
-      addClass: 'KeyN'
+      addClass: 'KeyN',
+      caseCapsEng: 'n',
+      caseCapsShiftEng: 'N',
+      caseDownEng: 'n',
+      caseUpEng: 'N',
+      caseCapsUkr: 'т',
+      caseCapsShiftUkr: 'Т',
+      caseDownUkr: 'т',
+      caseUpUkr: 'Т',
     },
     {
       name: 'KeyM',
-      eng: {
-        caseDown: 'm',
-        caseUp: 'M',
-        caseCaps: 'm',
-        caseCapsShift: 'M'
-      },
-      ukr: {
-        caseDown: "Ь",
-        caseUp: 'ь',
-        caseCaps: "Ь",
-        caseCapsShift: 'ь'
-      },
-      addClass: 'KeyM'
+      addClass: 'KeyM',
+      caseCapsEng: 'm',
+      caseCapsShiftEng: 'M',
+      caseDownEng: 'm',
+      caseUpEng: 'M',
+      caseCapsUkr: 'Ь',
+      caseCapsShiftUkr: 'ь',
+      caseDownUkr: 'Ь',
+      caseUpUkr: 'ь',
     },
     {
       name: 'Comma',
-      eng: {
-        caseDown: ',',
-        caseUp: '<',
-        caseCaps: ',',
-        caseCapsShift: '<'
-      },
-      ukr: {
-        caseDown: "б",
-        caseUp: 'Б',
-        caseCaps: "б",
-        caseCapsShift: 'Б'
-      },
-      addClass: 'Comma'
+      addClass: 'Comma',
+      caseCapsEng: ',',
+      caseCapsShiftEng: '<',
+      caseDownEng: ',',
+      caseUpEng: '<',
+      caseCapsUkr: 'б',
+      caseCapsShiftUkr: 'Б',
+      caseDownUkr: 'б',
+      caseUpUkr: 'Б',
     },
     {
       name: 'Period',
-      eng: {
-        caseDown: '>',
-        caseUp: '.',
-        caseCaps: '>',
-        caseCapsShift: '.'
-      },
-      ukr: {
-        caseDown: "Ю",
-        caseUp: 'ю',
-        caseCaps: "Ю",
-        caseCapsShift: 'ю'
-      },
-      addClass: 'Period'
+      addClass: 'Period',
+      caseCapsEng: '>',
+      caseCapsShiftEng: '.',
+      caseDownEng: '>',
+      caseUpEng: '.',
+      caseCapsUkr: 'Ю',
+      caseCapsShiftUkr: 'ю',
+      caseDownUkr: 'Ю',
+      caseUpUkr: 'ю',
     },
     {
       name: 'Slash',
-      eng: {
-        caseDown: '?',
-        caseUp: '/',
-        caseCaps: '?',
-        caseCapsShift: '/'
-      },
-      ukr: {
-        caseDown: ",",
-        caseUp: '.',
-        caseCaps: ",",
-        caseCapsShift: '.'
-      },
-      addClass: 'Slash'
+      addClass: 'Slash',
+      caseCapsEng: '?',
+      caseCapsShiftEng: '/',
+      caseDownEng: '?',
+      caseUpEng: '/',
+      caseCapsUkr: ',',
+      caseCapsShiftUkr: '.',
+      caseDownUkr: ',',
+      caseUpUkr: '.',
     },
     {
       name: 'ArrowUp',
-      eng: {
-        caseDown: `▲`,
-        caseUp: `▲`,
-        caseCaps: `▲`,
-        caseCapsShift: `▲`
-      },
-      ukr: {
-        caseDown: "▲",
-        caseUp: '▲',
-        caseCaps: "▲",
-        caseCapsShift: '▲'
-      },
-      addClass: 'ArrowUp'
+      addClass: 'ArrowUp',
+      caseCapsEng: '▲',
+      caseCapsShiftEng: '▲',
+      caseDownEng: '▲',
+      caseUpEng: '▲',
+      caseCapsUkr: '▲',
+      caseCapsShiftUkr: '▲',
+      caseDownUkr: '▲',
+      caseUpUkr: '▲',
     },
     {
       name: 'Shift',
-      eng: {
-        caseDown: 'Shift',
-        caseUp: 'Shift',
-        caseCaps: 'Shift',
-        caseCapsShift: 'Shift'
-      },
-      ukr: {
-        caseDown: "Shift",
-        caseUp: 'Shift',
-        caseCaps: "Shift",
-        caseCapsShift: 'Shift'
-      },
-      addClass: 'ShiftRight'
+      addClass: 'ShiftRight',
+      caseCapsEng: 'Shift',
+      caseCapsShiftEng: 'Shift',
+      caseDownEng: 'Shift',
+      caseUpEng: 'Shift',
+      caseCapsUkr: 'Shift',
+      caseCapsShiftUkr: 'Shift',
+      caseDownUkr: 'Shift',
+      caseUpUkr: 'Shift',
     },
   ],
   [
     {
       name: 'Ctrl',
-      eng: {
-        caseDown: 'Ctrl',
-        caseUp: 'Ctrl',
-        caseCaps: 'Ctrl',
-        caseCapsShift: 'Ctrl'
-      },
-      ukr: {
-        caseDown: "Ctrl",
-        caseUp: 'Ctrl',
-        caseCaps: "Ctrl",
-        caseCapsShift: 'Ctrl'
-      },
-      addClass: 'ControlLeft'
+      addClass: 'ControlLeft',
+      caseCapsEng: 'Ctrl',
+      caseCapsShiftEng: 'Ctrl',
+      caseDownEng: 'Ctrl',
+      caseUpEng: 'Ctrl',
+      caseCapsUkr: 'Ctrl',
+      caseCapsShiftUkr: 'Ctrl',
+      caseDownUkr: 'Ctrl',
+      caseUpUkr: 'Ctrl',
     },
     {
       name: 'Function',
-      eng: {
-        caseDown: 'Fn',
-        caseUp: 'Fn',
-        caseCaps: 'Fn',
-        caseCapsShift: 'Fn'
-      },
-      ukr: {
-        caseDown: "Fn",
-        caseUp: 'Fn',
-        caseCaps: "Fn",
-        caseCapsShift: 'Fn'
-      },
-      addClass: 'Function'
+      addClass: 'Function',
+      caseCapsEng: 'Fn',
+      caseCapsShiftEng: 'Fn',
+      caseDownEng: 'Fn',
+      caseUpEng: 'Fn',
+      caseCapsUkr: 'Fn',
+      caseCapsShiftUkr: 'Fn',
+      caseDownUkr: 'Fn',
+      caseUpUkr: 'Fn',
     },
     {
       name: 'MetaLeft',
-      eng: {
-        caseDown: 'Win',
-        caseUp: 'Win',
-        caseCaps: 'Win',
-        caseCapsShift: 'Win'
-      },
-      ukr: {
-        caseDown: "Win",
-        caseUp: 'Win',
-        caseCaps: "Win",
-        caseCapsShift: 'Win'
-      },
-      addClass: 'MetaLeft'
+      addClass: 'MetaLeft',
+      caseCapsEng: 'Win',
+      caseCapsShiftEng: 'Win',
+      caseDownEng: 'Win',
+      caseUpEng: 'Win',
+      caseCapsUkr: 'Win',
+      caseCapsShiftUkr: 'Win',
+      caseDownUkr: 'Win',
+      caseUpUkr: 'Win',
     },
-
     {
       name: 'AltLeft',
-      eng: {
-        caseDown: 'Alt',
-        caseUp: 'Alt',
-        caseCaps: 'Alt',
-        caseCapsShift: 'Alt'
-      },
-      ukr: {
-        caseDown: "Alt",
-        caseUp: 'Alt',
-        caseCaps: "Alt",
-        caseCapsShift: 'Alt'
-      },
-      addClass: 'AltLeft'
+      addClass: 'AltLeft',
+      caseCapsEng: 'Alt',
+      caseCapsShiftEng: 'Alt',
+      caseDownEng: 'Alt',
+      caseUpEng: 'Alt',
+      caseCapsUkr: 'Alt',
+      caseCapsShiftUkr: 'Alt',
+      caseDownUkr: 'Alt',
+      caseUpUkr: 'Alt',
     },
     {
       name: 'Space',
-      eng: {
-        caseDown: '',
-        caseUp: '',
-        caseCaps: '',
-        caseCapsShift: ''
-      },
-      ukr: {
-        caseDown: "",
-        caseUp: '',
-        caseCaps: "",
-        caseCapsShift: ''
-      },
-      addClass: 'Space'
+      addClass: 'Space',
+      caseCapsEng: '',
+      caseCapsShiftEng: '',
+      caseDownEng: '',
+      caseUpEng: '',
+      caseCapsUkr: '',
+      caseCapsShiftUkr: '',
+      caseDownUkr: '',
+      caseUpUkr: '',
     },
     {
       name: 'AltRight',
-      eng: {
-        caseDown: 'Alt',
-        caseUp: 'Alt',
-        caseCaps: 'Alt',
-        caseCapsShift: 'Alt'
-      },
-      ukr: {
-        caseDown: "Alt",
-        caseUp: 'Alt',
-        caseCaps: "Alt",
-        caseCapsShift: 'Alt'
-      },
-      addClass: 'AltRight'
+      addClass: 'AltRight',
+      caseCapsEng: 'Alt',
+      caseCapsShiftEng: 'Alt',
+      caseDownEng: 'Alt',
+      caseUpEng: 'Alt',
+      caseCapsUkr: 'Alt',
+      caseCapsShiftUkr: 'Alt',
+      caseDownUkr: 'Alt',
+      caseUpUkr: 'Alt',
     },
     {
       name: 'ArrowLeft',
-      eng: {
-        caseDown: '◄',
-        caseUp: '◄',
-        caseCaps: '◄',
-        caseCapsShift: '◄'
-      },
-      ukr: {
-        caseDown: "◄",
-        caseUp: '◄',
-        caseCaps: "◄",
-        caseCapsShift: '◄'
-      },
-      addClass: 'ArrowLeft'
+      addClass: 'ArrowLeft',
+      caseCapsEng: '◄',
+      caseCapsShiftEng: '◄',
+      caseDownEng: '◄',
+      caseUpEng: '◄',
+      caseCapsUkr: '◄',
+      caseCapsShiftUkr: '◄',
+      caseDownUkr: '◄',
+      caseUpUkr: '◄',
     },
     {
       name: 'ArrowDown',
-      eng: {
-        caseDown: '▼',
-        caseUp: '▼',
-        caseCaps: '▼',
-        caseCapsShift: '▼'
-      },
-      ukr: {
-        caseDown: "▼",
-        caseUp: '▼',
-        caseCaps: "▼",
-        caseCapsShift: '▼'
-      },
-      addClass: 'ArrowDown'
+      addClass: 'ArrowDown',
+      caseCapsEng: '▼',
+      caseCapsShiftEng: '▼',
+      caseDownEng: '▼',
+      caseUpEng: '▼',
+      caseCapsUkr: '▼',
+      caseCapsShiftUkr: '▼',
+      caseDownUkr: '▼',
+      caseUpUkr: '▼',
     },
     {
       name: 'ArrowRight',
-      eng: {
-        caseDown: '►',
-        caseUp: '►',
-        caseCaps: '►',
-        caseCapsShift: '►'
-      },
-      ukr: {
-        caseDown: "►",
-        caseUp: '►',
-        caseCaps: "►",
-        caseCapsShift: '►'
-      },
-      addClass: 'ArrowRight'
+      addClass: 'ArrowRight',
+      caseCapsEng: '►',
+      caseCapsShiftEng: '►',
+      caseDownEng: '►',
+      caseUpEng: '►',
+      caseCapsUkr: '►',
+      caseCapsShiftUkr: '►',
+      caseDownUkr: '►',
+      caseUpUkr: '►',
     },
     {
       name: 'ControlRight',
-      eng: {
-        caseDown: 'Ctrl',
-        caseUp: 'Ctrl',
-        caseCaps: 'Ctrl',
-        caseCapsShift: 'Ctrl'
-      },
-      ukr: {
-        caseDown: 'Ctrl',
-        caseUp: 'Ctrl',
-        caseCaps: 'Ctrl',
-        caseCapsShift: 'Ctrl'
-      },
-      addClass: 'ControlRight'
+      addClass: 'ControlRight',
+      caseCapsEng: 'Ctrl',
+      caseCapsShiftEng: 'Ctrl',
+      caseDownEng: 'Ctrl',
+      caseUpEng: 'Ctrl',
+      caseCapsUkr: 'Ctrl',
+      caseCapsShiftUkr: 'Ctrl',
+      caseDownUkr: 'Ctrl',
+      caseUpUkr: 'Ctrl',
     },
   ],
-]
+];
 
 export default data;
