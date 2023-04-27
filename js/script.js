@@ -1,20 +1,21 @@
 "use strict";
 
-const body = document.body
 import data from "./data.js";
 
+const body = document.body;
 
 
 // function createKeyboard creates keyboard body and display
 
 function createKeyboard() {
-  const display = document.createElement('div');
-  display.classList.add('display');
-  body.append(display);
-  const keyboard = document.createElement('div');
-  keyboard.classList.add('keyboard')
-  body.append(keyboard)
-  createKeyboardRow(data, keyboard)
+  // const display = document.createElement('div');
+  // display.classList.add('display');
+  // body.append(display);
+  // const keyboard = document.createElement('div');
+  // keyboard.classList.add('keyboard')
+  // body.append(keyboard)
+
+  // createKeyboardRow(data, keyboard)
 
   const keyboardRows = document.querySelectorAll('.keyboard-row');
 
@@ -23,19 +24,29 @@ function createKeyboard() {
   }
 }
 
-createKeyboard()
+// createKeyboard()
 
 class Keyboard {
-  constructor() {
-
+  constructor(body, data) {
+    this.body = body;
+    this.data = data
   }
 
   createKeyboardInner() {
 
+    this.display = document.createElement('div');
+    this.display.classList.add('display');
+    this.body.append(this.display);
+
+    this.keyboard = document.createElement('div');
+    this.keyboard.classList.add('keyboard');
+    this.body.append(this.keyboard);
+
   }
+
 }
 
-new Keyboard().createKeyboardInner()
+new Keyboard(body, data).createKeyboardInner()
 
 
 // function create keyboard rows for keyboard
