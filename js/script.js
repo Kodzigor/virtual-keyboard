@@ -42,11 +42,31 @@ class Keyboard {
     this.keyboard.classList.add('keyboard');
     this.body.append(this.keyboard);
 
+    // We create each keyboard row
+    this.createKeyboardRows(this.data, this.keyboard);
+
+  }
+
+  // Method create keyboard rows
+  createKeyboardRows(data, parentElement) {
+    this.parenElement = parentElement;
+    data.forEach(el => {
+      this.keyboardRow = document.createElement('div');
+      this.keyboardRow.classList.add('keyboard-row');
+      this.parenElement.append(this.keyboardRow);
+    })
   }
 
 }
 
 new Keyboard(body, data).createKeyboardInner()
+
+
+class Key {
+  constructor() {
+
+  }
+}
 
 
 // function create keyboard rows for keyboard
