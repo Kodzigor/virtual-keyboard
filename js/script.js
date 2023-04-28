@@ -10,13 +10,12 @@ class Keyboard {
   constructor(body, data) {
     this.body = body;
     this.data = data;
-
-
+    // this.findAllKeys()
   }
 
   // Method create Keyboard components
   createKeyboardInner() {
-    this.display = document.createElement('div');
+    this.display = document.createElement('textarea');
     this.display.classList.add('display');
     this.body.append(this.display);
 
@@ -26,6 +25,23 @@ class Keyboard {
 
     // We create each keyboard row
     this.createKeyboardRows(this.data, this.keyboard);
+
+    this.keyboard.addEventListener('click', (e) => {
+      this.target = e.target;
+      this.content
+      // if(this.target.children.children)
+      for (const el of Array.from(this.target.children)) {
+        for (const subEl of Array.from(el.children)) {
+          if(!subEl.classList.contains('hidden')) {
+            console.log(subEl.textContent);
+            this.content = subEl.textContent
+          }
+        }
+      }
+
+      this.display.textContent += this.content;
+      // console.log(Array.from(this.target.children));
+    })
   }
 
   // Method create keyboard rows
@@ -44,11 +60,14 @@ class Keyboard {
       this.createKeyboardKeys(this.data[i], this.rows[i]);
 
     }
+
+    this.keys = document.querySelectorAll('.keyboard-key')
   }
 
   // Method create Keyboard keys
   createKeyboardKeys(data, parentElement) {
     this.parenElement = parentElement;
+    this.key;
 
       for (const subEl of data) {
       this.key = document.createElement('div');
@@ -71,6 +90,11 @@ class Keyboard {
       this.parenElement.append(this.key);
     }
   }
+
+  // findAllKeys(e) {
+  //     this.target = e;
+  //     console.log(this.target.classList);
+  // }
 }
 
 new Keyboard(body, data).createKeyboardInner();

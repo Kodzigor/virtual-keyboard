@@ -37,6 +37,8 @@ p {
   height: 250px;
   border: 1px solid black;
   border-radius: 9px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 .keyboard {
