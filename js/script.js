@@ -90,6 +90,10 @@ class Keyboard {
         key.classList.contains(e.code) ? key.classList.add('active') : key.classList.remove('active')
       })
     })
+    document.addEventListener('keyup', () => {
+      this.keysArray.forEach(key => key.classList.remove('active'))
+
+    })
   }
 }
 

@@ -72,7 +72,7 @@ p {
   background-color: rgb(65, 65, 65);
 }
 .keyboard-key.active {
-  background-color: aquamarine;
+  background-color: rgb(96, 172, 165);
 }
 
 .Backspace {
