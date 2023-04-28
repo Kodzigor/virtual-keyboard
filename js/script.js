@@ -10,6 +10,7 @@ class Keyboard {
   constructor(body, data) {
     this.body = body;
     this.data = data;
+    // this.handePhisicalKeyboardKeysPress()
     // this.findAllKeys()
   }
 
@@ -23,25 +24,16 @@ class Keyboard {
     this.keyboard.classList.add('keyboard');
     this.body.append(this.keyboard);
 
+
+
     // We create each keyboard row
     this.createKeyboardRows(this.data, this.keyboard);
 
-    this.keyboard.addEventListener('click', (e) => {
-      this.target = e.target;
-      this.content
-      // if(this.target.children.children)
-      for (const el of Array.from(this.target.children)) {
-        for (const subEl of Array.from(el.children)) {
-          if(!subEl.classList.contains('hidden')) {
-            console.log(subEl.textContent);
-            this.content = subEl.textContent
-          }
-        }
-      }
 
-      this.display.textContent += this.content;
-      // console.log(Array.from(this.target.children));
-    })
+    this.keys = Array.from(document.querySelectorAll('.keyboard-key'));
+    this.keys.find(key => key.classList.contains('Backquote') ? console.log(key) : null)
+    // console.log(this.keys);
+    this.handePhisicalKeyboardKeysPress(this.keys);
   }
 
   // Method create keyboard rows
@@ -58,10 +50,9 @@ class Keyboard {
     this.rows = document.querySelectorAll('.keyboard-row')
     for (let i = 0; i < data.length; i++) {
       this.createKeyboardKeys(this.data[i], this.rows[i]);
-
     }
 
-    this.keys = document.querySelectorAll('.keyboard-key')
+
   }
 
   // Method create Keyboard keys
@@ -91,10 +82,15 @@ class Keyboard {
     }
   }
 
-  // findAllKeys(e) {
-  //     this.target = e;
-  //     console.log(this.target.classList);
-  // }
+  handePhisicalKeyboardKeysPress(keysArray) {
+    this.keysArray = keysArray;
+    document.addEventListener('keydown', (e) => {
+      console.log(e.code);
+      this.keysArray.find(key => {
+        key.classList.contains(e.code) ? key.classList.add('active') : key.classList.remove('active')
+      })
+    })
+  }
 }
 
 new Keyboard(body, data).createKeyboardInner();

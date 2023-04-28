@@ -72,6 +72,11 @@ p {
   &:hover {
     background-color: rgb(65, 65, 65);
   }
+
+  &.active {
+    background-color: aquamarine;
+
+  }
 }
 
 .Backspace {

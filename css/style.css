@@ -71,6 +71,9 @@ p {
 .keyboard-key:hover {
   background-color: rgb(65, 65, 65);
 }
+.keyboard-key.active {
+  background-color: aquamarine;
+}
 
 .Backspace {
   width: 125px;
