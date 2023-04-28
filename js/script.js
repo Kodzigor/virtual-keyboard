@@ -10,8 +10,6 @@ class Keyboard {
   constructor(body, data) {
     this.body = body;
     this.data = data;
-    // this.handePhisicalKeyboardKeysPress()
-    // this.findAllKeys()
   }
 
   // Method create Keyboard components
@@ -31,8 +29,8 @@ class Keyboard {
 
 
     this.keys = Array.from(document.querySelectorAll('.keyboard-key'));
-    this.keys.find(key => key.classList.contains('Backquote') ? console.log(key) : null)
-    // console.log(this.keys);
+    // this.keys.find(key => key.classList.contains('Backquote') ? console.log(key) : null)
+
     this.handePhisicalKeyboardKeysPress(this.keys);
   }
 
@@ -84,14 +82,29 @@ class Keyboard {
 
   handePhisicalKeyboardKeysPress(keysArray) {
     this.keysArray = keysArray;
+    this.keysPressed = new Set()
+    this.pressed = new Set();
+
     document.addEventListener('keydown', (e) => {
-      console.log(e.code);
-      this.keysArray.find(key => {
-        key.classList.contains(e.code) ? key.classList.add('active') : key.classList.remove('active')
-      })
+      this.pressed.add(e.code);
+      for (const item of this.pressed) {
+        this.keysArray.map(el => {
+          el.classList.contains(item) ? this.keysPressed.add(el) : null ;
+        })
+      }
+      this.keysPressed.forEach(el => el.classList.add('active'))
     })
-    document.addEventListener('keyup', () => {
+
+    document.addEventListener('keyup', (e) => {
       this.keysArray.forEach(key => key.classList.remove('active'))
+
+      for (const el of this.keysPressed) {
+        el.classList.contains(e.code) ? (this.targetKeyPressed = el) && (this.keyPressed = el.code) : null
+      }
+      this.keysPressed.clear()
+      this.pressed.clear()
+
+      console.log(this.pressed);
 
     })
   }
