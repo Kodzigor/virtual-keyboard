@@ -80,6 +80,12 @@ class Keyboard {
     }
   }
 
+  showUpperCaseKeys() {
+
+
+
+  }
+
   handePhisicalKeyboardKeysPress(keysArray) {
     this.keysArray = keysArray;
     this.keysPressed = new Set()
