@@ -81,7 +81,7 @@ class Keyboard {
       let characters = document.querySelectorAll('.character');
       let capsKey = document.querySelector('.CapsLock');
 
-          this.keyboard.addEventListener('click', (e) => {
+         capsKey.addEventListener('click', (e) => {
               if(e.target.parentElement.classList.contains('CapsLock') && !capsKey.classList.contains('active')) {
                   capsKey.classList.add('active')
                   characters.forEach(char => {
