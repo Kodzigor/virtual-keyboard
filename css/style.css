@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -63,7 +63,7 @@ p {
   height: 55px;
   background-color: rgb(51, 51, 51);
   border-radius: 5px;
-  padding: 10px;
+  padding: 3px 10px;
   cursor: pointer;
   display: flex;
   transition: background-color 0.3s;
@@ -102,6 +102,21 @@ p {
 
 .Space {
   width: 385px;
+}
+
+.eng,
+.ukr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.special .eng {
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
