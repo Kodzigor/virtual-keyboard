@@ -13,7 +13,8 @@ class Keyboard {
     this.createKeyboardInner();
     this.createKeyboardKeys(this.data, this.keyboard);
     this.capsLockHandler();
-    this.changeLanguageHandler('ControlLeft', 'AltLeft')
+    this.changeLanguageHandler('ControlLeft', 'AltLeft');
+    this.handleClicksToKeyboard()
   }
 
   // Method creates Keyboard display and keyboard
@@ -138,6 +139,31 @@ class Keyboard {
             pressedKeys.delete(e.code)
         })
     }
+
+  // Method handles clicks to Keboard keys
+
+  handleClicksToKeyboard() {
+
+    this.keyboard.addEventListener('mousedown', (e) => {
+        if( !e.target.parentElement.classList.contains('CapsLock')) {
+            e.target.parentElement.classList.add('active')
+        }
+    })
+
+    this.keyboard.addEventListener('mouseup', (e) => {
+        if( !e.target.parentElement.classList.contains('CapsLock')) {
+            e.target.parentElement.classList.remove('active')
+        }
+    })
+    this.keyboard.addEventListener('click', (e) => {
+        if( !e.target.parentElement.classList.contains('CapsLock')) {
+            e.target.parentElement.classList.add('active')
+            setTimeout(() => {
+                e.target.parentElement.classList.remove('active')
+            }, 100)
+        }
+    })
+}
 
 }
 
