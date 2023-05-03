@@ -36,6 +36,9 @@ class Keyboard {
 
       element.forEach(subEl => {
         let key = document.createElement('div');
+        let overlay = document.createElement('div');
+          overlay.classList.add('keyboard-key--overlay');
+          key.append(overlay);
         key.classList.add('keyboard-key', subEl.class[0], subEl.class[1]);
 
         if(key.classList.contains('special')) {

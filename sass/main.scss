@@ -68,6 +68,7 @@ p {
   cursor: pointer;
   display: flex;
   transition: background-color 0.3s;
+  position: relative;
 
   &:hover {
     background-color: rgb(65, 65, 65);
@@ -75,7 +76,15 @@ p {
 
   &.active {
     background-color: rgb(96, 172, 165);
+  }
 
+  &--overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
   }
 }
 
