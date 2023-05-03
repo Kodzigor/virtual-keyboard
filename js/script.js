@@ -13,6 +13,7 @@ class Keyboard {
     this.createKeyboardInner();
     this.createKeyboardKeys(this.data, this.keyboard);
     this.capsLockHandler();
+    this.changeLanguageHandler('ControlLeft', 'AltLeft')
   }
 
   // Method creates Keyboard display and keyboard
@@ -100,6 +101,40 @@ class Keyboard {
               }
           })
   }
+
+  // Method to handle Keyboard layout change
+
+  changeLanguageHandler(...combination) {
+        let pressedKeys = new Set();
+        let chars = document.querySelectorAll('.character');
+        let nums = document.querySelectorAll('.number');
+
+        document.addEventListener('keydown', (e) => {
+            pressedKeys.add(e.code);
+
+            for (let code of combination) {
+                if(!pressedKeys.has(code)) {
+                    return
+                }
+            }
+
+            pressedKeys.clear();
+            chars.forEach(char => {
+                Array.from(char.children).forEach(child => {
+                    child.classList.toggle('hidden')
+                })
+            })
+            nums.forEach(num => {
+                Array.from(num.children).forEach(child => {
+                    child.classList.toggle('hidden')
+                })
+            })
+        })
+
+        document.addEventListener('keyup', (e) => {
+            pressedKeys.delete(e.code)
+        })
+    }
 
 }
 
