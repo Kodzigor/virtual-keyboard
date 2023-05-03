@@ -78,23 +78,24 @@ class Keyboard {
   // Method handles Caps Lock key
 
   capsLockHandler() {
-      let characters = document.querySelectorAll('.character');
+      let spans = document.querySelectorAll('.character > span > span');
       let capsKey = document.querySelector('.CapsLock');
+      let abc = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхїфівапролджєячсмитьбюQWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЇФІВАПРОЛДЖЄЯЧСМИТЬБЮ'.split('');
 
-         capsKey.addEventListener('click', (e) => {
+      capsKey.addEventListener('click', (e) => {
               if(e.target.parentElement.classList.contains('CapsLock') && !capsKey.classList.contains('active')) {
                   capsKey.classList.add('active')
-                  characters.forEach(char => {
-                      Array.from(char.children).forEach(child => {
-                          child.textContent = child.textContent.toUpperCase()
-                      })
+                  spans.forEach(span => {
+                      if(abc.includes(span.textContent)) {
+                          span.textContent = span.textContent.toUpperCase()
+                      }
                   })
               } else {
-                      capsKey.classList.remove('active')
-                      characters.forEach(char => {
-                          Array.from(char.children).forEach(child => {
-                              child.textContent = child.textContent.toLowerCase()
-                          })
+                  capsKey.classList.remove('active')
+                  spans.forEach(span => {
+                      if(abc.includes(span.textContent)) {
+                          span.textContent = span.textContent.toLowerCase()
+                      }
                   })
               }
           })
