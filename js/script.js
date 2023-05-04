@@ -43,6 +43,14 @@ class Keyboard {
     this.keyboard = document.createElement('div');
     this.keyboard.classList.add('keyboard');
     this.body.append(this.keyboard);
+
+    this.description = document.createElement('span');
+    this.description.classList.add('description');
+    this.description.innerHTML += `
+    <span>This keyboard created in Windows OS.</span>
+    <span>To change keyboard layout press CtrlLeft + AltLeft.</span>
+    `;
+    this.body.append(this.description)
   }
 
   // Method sets Keyboard language
