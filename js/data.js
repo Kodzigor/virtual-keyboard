@@ -906,7 +906,8 @@ const data = [
         caseCaps: "▲",
         caseCapsShift: '▲'
       },
-      addClass: 'ArrowUp'
+      addClass: 'ArrowUp',
+      specialClass: 'char'
     },
     {
       name: 'Shift',
@@ -1043,7 +1044,8 @@ const data = [
         caseCaps: "◄",
         caseCapsShift: '◄'
       },
-      addClass: 'ArrowLeft'
+      addClass: 'ArrowLeft',
+      specialClass: 'char'
     },
     {
       name: 'ArrowDown',
@@ -1059,7 +1061,8 @@ const data = [
         caseCaps: "▼",
         caseCapsShift: '▼'
       },
-      addClass: 'ArrowDown'
+      addClass: 'ArrowDown',
+      specialClass: 'char'
     },
     {
       name: 'ArrowRight',
@@ -1075,7 +1078,8 @@ const data = [
         caseCaps: "►",
         caseCapsShift: '►'
       },
-      addClass: 'ArrowRight'
+      addClass: 'ArrowRight',
+      specialClass: 'char'
     },
     {
       name: 'ControlRight',

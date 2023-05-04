@@ -340,6 +340,8 @@ class Keyboard {
         this.display.textContent += ' ';
       } else if(e.target.parentElement.classList.contains('Backspace')) {
         this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
+      } else if(e.target.parentElement.classList.contains('Enter')) {
+        this.display.textContent += '\n';
       }
     })
 
@@ -354,6 +356,8 @@ class Keyboard {
           this.display.textContent += ' ';
         } else if(e.code === 'Backspace') {
           this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
+        } else if(e.code === 'Enter') {
+          this.display.textContent += '\n'
         }
     })
   }
