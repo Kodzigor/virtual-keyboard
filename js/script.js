@@ -3,6 +3,18 @@
 import data from './data.js';
 
 const body = document.body;
+const props = {
+  lang: 'ukr',
+  caps: false,
+  langs: [
+    {lang: 'ukr',
+    isCurrent: false
+  },
+    {lang: 'eng',
+    isCurrent: true
+  }
+  ]
+};
 
 
 // create a class Keyboard
@@ -167,4 +179,4 @@ class Keyboard {
 
 }
 
-new Keyboard(body, data);
+new Keyboard(body, data, props);
