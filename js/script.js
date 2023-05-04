@@ -85,8 +85,6 @@ class Keyboard {
             <span class="case-capsShift hidden">${subEl[lang].caseCapsShift}</span>
           </span>
         `;
-        // console.log(key);
-
         row.append(key)
       })
 
@@ -152,8 +150,6 @@ class Keyboard {
         }
       }
     })
-
-    // document.addEventListener('keydown', (e) )
   }
 
   // Method handles with Shift keys
@@ -300,7 +296,6 @@ class Keyboard {
   }
 
   // Method handles clicks to Keyboard
-
   handleKeyboardKeysClick() {
     this.keyboard.addEventListener('mousedown', (e) => {
       if(!e.target.parentElement.classList.contains('CapsLock')) {
@@ -339,7 +334,6 @@ class Keyboard {
   showContent() {
     this.display.textContent = '';
     this.keyboard.addEventListener('click', (e) => {
-      // console.log(e.target.parentElement.innerText);
       if(e.target.nextElementSibling.classList.contains('char')) {
         this.display.textContent += e.target.parentElement.innerText;
       } else if(e.target.parentElement.classList.contains('Space')) {
@@ -354,7 +348,6 @@ class Keyboard {
     })
 
     document.addEventListener('keydown', (e) => {
-      // console.log(e.code);
       Array.from(this.keys).find(el => {
         if(el.parentElement.classList.contains(e.code)) {
           this.display.textContent += el.parentElement.innerText;
