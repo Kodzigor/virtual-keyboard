@@ -334,6 +334,8 @@ class Keyboard {
       console.log(e.target.parentElement.innerText);
       if(e.target.nextElementSibling.classList.contains('char')) {
         this.display.textContent += e.target.parentElement.innerText;
+      } else if(e.target.parentElement.classList.contains('Space')) {
+        this.display.textContent += ' ';
       }
     })
   }
