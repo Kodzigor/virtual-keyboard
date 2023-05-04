@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.display {
+  width: 1000px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 9px;
+  font-size: 30px;
+  padding: 10px;
+  resize: none;
+}
+
+.keyboard {
+  width: 1000px;
+  height: 350px;
+  background-color: rgb(94, 93, 93);
+  border-radius: 9px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  color: #222;
+  margin-top: 10px;
+}
+
+.keyboard-row {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 8px;
+}
+
+.keyboard-key {
+  width: 55px;
+  height: 55px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 5px;
+  padding: 3px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  position: relative;
+
+  &:hover {
+    background-color: rgb(65, 65, 65);
+  }
+
+  &.active {
+    background-color: rgb(96, 172, 165);
+  }
+
+  &--overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.Backspace {
+  width: 125px;
+}
+
+.Tab,
+.Backslash {
+  width: 90px;
+}
+
+.CapsLock {
+  width: 100px;
+}
+
+.Enter {
+  width: 145px;
+}
+
+.ShiftLeft {
+  width: 125px;
+}
+
+.ShiftRight {
+  width: 120px;
+}
+
+.Space {
+  width: 385px;
+}
+
+.eng,
+.ukr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.special {
+  & .eng {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
