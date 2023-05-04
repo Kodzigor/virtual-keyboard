@@ -285,6 +285,7 @@ class Keyboard {
       this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
       this.handleCapsLock();
       this.handleShiftKey();
+      this.handleKeyboardKeysClick();
     })
 
     document.addEventListener('keyup', (e) => {
@@ -339,6 +340,19 @@ class Keyboard {
       } else if(e.target.parentElement.classList.contains('Backspace')) {
         this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
       }
+    })
+
+    console.log(this.keys);
+
+    document.addEventListener('keydown', (e) => {
+      console.log(e.code);
+      Array.from(this.keys).find(el => {
+        if(el.parentElement.classList.contains(e.code)) {
+          this.display.textContent += el.parentElement.innerText;
+        }
+      })
+
+
     })
   }
 }
