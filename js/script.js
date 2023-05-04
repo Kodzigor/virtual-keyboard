@@ -333,7 +333,7 @@ class Keyboard {
   showContent() {
     // this.display.textContent = '';
     this.keyboard.addEventListener('click', (e) => {
-      console.log(e.target.parentElement.innerText);
+      // console.log(e.target.parentElement.innerText);
       if(e.target.nextElementSibling.classList.contains('char')) {
         this.display.textContent += e.target.parentElement.innerText;
       } else if(e.target.parentElement.classList.contains('Space')) {
@@ -342,11 +342,13 @@ class Keyboard {
         this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
       } else if(e.target.parentElement.classList.contains('Enter')) {
         this.display.textContent += '\n';
+      } else if(e.target.parentElement.classList.contains('Tab')) {
+        this.display.textContent += '\t';
       }
     })
 
     document.addEventListener('keydown', (e) => {
-      console.log(e.code);
+      // console.log(e.code);
       Array.from(this.keys).find(el => {
         if(el.parentElement.classList.contains(e.code)) {
           this.display.textContent += el.parentElement.innerText;
@@ -357,7 +359,9 @@ class Keyboard {
         } else if(e.code === 'Backspace') {
           this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
         } else if(e.code === 'Enter') {
-          this.display.textContent += '\n'
+          this.display.textContent += '\n';
+        } else if(e.code === 'Tab') {
+          this.display.textContent += '\t';
         }
     })
   }
