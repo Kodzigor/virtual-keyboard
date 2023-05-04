@@ -31,6 +31,7 @@ class Keyboard {
     this.handleShiftKey();
     this.swithcKeyboardLanguage('ControlLeft', 'AltLeft');
     this.handleKeyboardKeysClick();
+    this.showContent();
   }
 
   // Method creates Keyboard display and keyboard
@@ -308,7 +309,6 @@ class Keyboard {
     this.allKeys = document.querySelectorAll('.keyboard-key');
 
     document.addEventListener('keydown', (e) => {
-      console.log(e.code);
       if(e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
         Array.from(this.allKeys).find(el => {
         if(el.classList.contains(e.code) ) {
@@ -328,6 +328,15 @@ class Keyboard {
     })
   }
 
+  // Method to display content at the Keyboard Display
+  showContent() {
+    this.keyboard.addEventListener('click', (e) => {
+      console.log(e.target.parentElement.innerText);
+      if(e.target.nextElementSibling.classList.contains('char')) {
+        this.display.textContent += e.target.parentElement.innerText;
+      }
+    })
+  }
 }
 
 new Keyboard(body, data, props);
