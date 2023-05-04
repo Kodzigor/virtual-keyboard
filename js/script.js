@@ -29,7 +29,7 @@ class Keyboard {
     this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
     this.handleCapsLock();
     this.handleShiftKey();
-    this.swithcKeyboardLanguage('ControlLeft', 'AltLeft');
+    this.switchKeyboardLanguage('ControlLeft', 'AltLeft');
     this.handleKeyboardKeysClick();
     this.showContent();
   }
@@ -103,28 +103,25 @@ class Keyboard {
         if(!this.props.caps) {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
-
-          el.classList.add('hidden');
-            if(el.classList.contains('case-caps')) {
-              el.classList.remove('hidden');
-              this.props.caps = true;
-              this.capsLock.classList.add('active');
+            el.classList.add('hidden');
+              if(el.classList.contains('case-caps')) {
+                el.classList.remove('hidden');
+                this.props.caps = true;
+                this.capsLock.classList.add('active');
               }
             })
           })
         } else {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
-
-          el.classList.add('hidden');
-            if(el.classList.contains('case-down')) {
-              el.classList.remove('hidden');
-              this.props.caps = false;
-              this.capsLock.classList.remove('active');
+            el.classList.add('hidden');
+              if(el.classList.contains('case-down')) {
+                el.classList.remove('hidden');
+                this.props.caps = false;
+                this.capsLock.classList.remove('active');
               }
             })
           })
-
         }
     })
 
@@ -136,26 +133,27 @@ class Keyboard {
             el.classList.add('hidden');
               if(el.classList.contains('case-caps')) {
                 el.classList.remove('hidden');
-                this.props.caps = true;
                 this.capsLock.classList.add('active');
+                this.props.caps = true;
                 }
             })
           })
-        } else {
+        } else if(this.props.caps) {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
             el.classList.add('hidden');
               if(el.classList.contains('case-down')) {
                 el.classList.remove('hidden');
-                this.props.caps = false;
                 this.capsLock.classList.remove('active');
-
-                }
+                this.props.caps = false;
+              }
             })
           })
         }
       }
     })
+
+    // document.addEventListener('keydown', (e) )
   }
 
   // Method handles with Shift keys
@@ -269,7 +267,7 @@ class Keyboard {
   }
 
   // Method to switch Keyboard languages
-  swithcKeyboardLanguage(...combination) {
+  switchKeyboardLanguage(...combination) {
     let pressedKeys = new Set();
 
     document.addEventListener('keydown', (e) => {
@@ -339,7 +337,7 @@ class Keyboard {
 
   // Method to display content at the Keyboard Display
   showContent() {
-    // this.display.textContent = '';
+    this.display.textContent = '';
     this.keyboard.addEventListener('click', (e) => {
       // console.log(e.target.parentElement.innerText);
       if(e.target.nextElementSibling.classList.contains('char')) {
