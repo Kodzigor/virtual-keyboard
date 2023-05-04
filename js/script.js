@@ -7,10 +7,12 @@ const props = {
   lang: 'ukr',
   caps: false,
   langs: [
-    {lang: 'ukr',
+    {
+    lang: 'ukr',
     isCurrent: false
   },
-    {lang: 'eng',
+    {
+    lang: 'eng',
     isCurrent: true
   }
   ]
@@ -25,13 +27,13 @@ class Keyboard {
     this.props = props;
     this.createKeyboardInner();
     this.setKeyboardLang();
-    this.createKeyboardKeys(this.data, this.keyboard);
+    this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
     // this.capsLockHandler();
     // this.changeLanguageHandler('ControlLeft', 'AltLeft');
     // this.handleClicksToKeyboard()
   }
 
-  // Method creates Keyboard display and keyboard
+    // Method creates Keyboard display and keyboard
   createKeyboardInner() {
     this.display = document.createElement('textarea');
     this.display.classList.add('display');
@@ -42,6 +44,7 @@ class Keyboard {
     this.body.append(this.keyboard);
   }
 
+    // Method sets Keyboard language
   setKeyboardLang() {
     console.log(this.props.langs);
     this.currentLang = this.props.langs.find(lang => {
@@ -53,49 +56,28 @@ class Keyboard {
 
 
   // Method creates Keyboard keys
-  createKeyboardKeys(data, parentElement) {
+  createKeyboardKeys(data, parentElement, lang) {
     data.forEach((element) => {
       let row = document.createElement('div');
       row.classList.add('keyboard-row');
 
       element.forEach(subEl => {
         let key = document.createElement('div');
+        // let specialClass = subEl.specialClass || '';
+        key.classList.add('keyboard-key', subEl.addClass)
         let overlay = document.createElement('div');
-          overlay.classList.add('keyboard-key--overlay');
-          key.append(overlay);
-        key.classList.add('keyboard-key', subEl.class[0], subEl.class[1]);
+        overlay.classList.add('keyboard-key--overlay');
+        key.append(overlay);
 
-        if(key.classList.contains('special')) {
-          console.log('Hi');
-          let spanSpecial = document.createElement('span');
-          spanSpecial.classList.add('eng');
-          spanSpecial.textContent = subEl.eng;
-          key.append(spanSpecial)
-        } else {
-          if(subEl.eng) {
-          let spanEng = document.createElement('span');
-          spanEng.classList.add('eng', 'hidden')
+        key.innerHTML += `
+        <span class="${subEl.specialClass}">
+            <span class="case-down">${subEl[lang].caseDown}</span>
+            <span class="case-up hidden">${subEl[lang].caseUp}</span>
+            <span class="case-caps hidden">${subEl[lang].caseCaps}</span>
+            <span class="case-capsShift hidden">${subEl[lang].caseCapsShift}</span>
+          </span>
+        `;
 
-          subEl.eng.forEach((el, i) => {
-            let span = document.createElement('span');
-            span.textContent = subEl.eng[i]
-            spanEng.append(span)
-          })
-          key.append(spanEng)
-        }
-
-        if(subEl.ukr) {
-          let spanUkr = document.createElement('span');
-          spanUkr.classList.add('ukr')
-
-          subEl.eng.forEach((el, i) => {
-            let span = document.createElement('span');
-            span.textContent = subEl.ukr[i]
-            spanUkr.append(span)
-          })
-          key.append(spanUkr)
-        }
-      }
         row.append(key)
       })
 
