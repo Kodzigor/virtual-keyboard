@@ -295,7 +295,6 @@ class Keyboard {
 
   handleKeyboardKeysClick() {
     this.keyboard.addEventListener('mousedown', (e) => {
-      console.log(e.target);
       if(!e.target.parentElement.classList.contains('CapsLock')) {
          e.target.parentElement.classList.add('active')
       }
@@ -303,6 +302,28 @@ class Keyboard {
     this.keyboard.addEventListener('mouseup', (e) => {
       if( !e.target.parentElement.classList.contains('CapsLock')) {
           e.target.parentElement.classList.remove('active')
+      }
+    })
+
+    this.allKeys = document.querySelectorAll('.keyboard-key');
+
+    document.addEventListener('keydown', (e) => {
+      console.log(e.code);
+      if(e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
+        Array.from(this.allKeys).find(el => {
+        if(el.classList.contains(e.code) ) {
+          el.classList.add('active')
+        }
+        })
+      }
+    })
+    document.addEventListener('keyup', (e) => {
+      if(e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
+        Array.from(this.allKeys).find(el => {
+        if(el.classList.contains(e.code)) {
+          el.classList.remove('active')
+        }
+      })
       }
     })
   }
