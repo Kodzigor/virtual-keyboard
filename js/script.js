@@ -4,7 +4,6 @@ import data from './data.js';
 
 const body = document.body;
 const props = {
-  lang: 'ukr',
   caps: false,
   langs: [
     {
@@ -30,6 +29,7 @@ class Keyboard {
     this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
     this.handleCapsLock();
     this.handleShiftKey();
+    this.swithcKeyboardLanguage('ControlLeft', 'AltLeft')
   }
 
     // Method creates Keyboard display and keyboard
@@ -45,7 +45,6 @@ class Keyboard {
 
     // Method sets Keyboard language
   setKeyboardLang() {
-    console.log(this.props.langs);
     this.currentLang = this.props.langs.find(lang => {
       if(lang.isCurrent) {
         return lang.lang
@@ -76,6 +75,7 @@ class Keyboard {
             <span class="case-capsShift hidden">${subEl[lang].caseCapsShift}</span>
           </span>
         `;
+        // console.log(key);
 
         row.append(key)
       })
@@ -203,10 +203,8 @@ class Keyboard {
     })
 
     document.addEventListener('keydown', (e) => {
-      console.log(e.code);
       this.shiftKeys.forEach(shift => {
         if(shift.classList.contains(e.code)) {
-          console.log('Hi');
           if(!this.props.caps) {
             this.keys.forEach(key => {
             Array.from(key.children).forEach(el => {
@@ -258,6 +256,38 @@ class Keyboard {
         }
       })
     })
+  }
+
+  // Method to switch Keyboard languages
+  swithcKeyboardLanguage(...combination) {
+    let pressedKeys = new Set();
+
+    document.addEventListener('keydown', (e) => {
+      pressedKeys.add(e.code);
+
+      for (let code of combination) {
+        if(!pressedKeys.has(code)) {
+          return
+        }
+      }
+      pressedKeys.clear();
+      this.props.langs.forEach(lang => {
+        if(lang.isCurrent) {
+          lang.isCurrent = false
+        } else {
+          lang.isCurrent = true
+        }
+      })
+      this.keyboard.innerHTML = '';
+      this.setKeyboardLang()
+      this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
+      this.handleCapsLock();
+      this.handleShiftKey();
+    })
+
+    document.addEventListener('keyup', (e) => {
+            pressedKeys.delete(e.code)
+        })
   }
 
 }
