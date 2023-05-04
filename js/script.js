@@ -331,6 +331,7 @@ class Keyboard {
 
   // Method to display content at the Keyboard Display
   showContent() {
+    // this.display.textContent = '';
     this.keyboard.addEventListener('click', (e) => {
       console.log(e.target.parentElement.innerText);
       if(e.target.nextElementSibling.classList.contains('char')) {
@@ -342,8 +343,6 @@ class Keyboard {
       }
     })
 
-    console.log(this.keys);
-
     document.addEventListener('keydown', (e) => {
       console.log(e.code);
       Array.from(this.keys).find(el => {
@@ -351,8 +350,11 @@ class Keyboard {
           this.display.textContent += el.parentElement.innerText;
         }
       })
-
-
+      if(e.code === 'Space') {
+          this.display.textContent += ' ';
+        } else if(e.code === 'Backspace') {
+          this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
+        }
     })
   }
 }

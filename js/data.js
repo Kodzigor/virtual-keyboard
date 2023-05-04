@@ -757,20 +757,20 @@ const data = [
       specialClass: 'char'
     },
     {
-      name: 'KeyС',
+      name: 'KeyC',
       eng: {
-        caseDown: 'с',
-        caseUp: 'С',
+        caseDown: 'c',
+        caseUp: 'C',
         caseCaps: 'C',
         caseCapsShift: 'c'
       },
       ukr: {
-        caseDown: "c",
-        caseUp: 'C',
+        caseDown: "с",
+        caseUp: 'С',
         caseCaps: "С",
         caseCapsShift: 'с'
       },
-      addClass: 'KeyС',
+      addClass: 'KeyC',
       specialClass: 'char'
     },
     {
@@ -1010,7 +1010,8 @@ const data = [
         caseCaps: "",
         caseCapsShift: ''
       },
-      addClass: 'Space'
+      addClass: 'Space',
+      // specialClass: 'char'
     },
     {
       name: 'AltRight',
