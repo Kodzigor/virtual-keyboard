@@ -336,6 +336,8 @@ class Keyboard {
         this.display.textContent += e.target.parentElement.innerText;
       } else if(e.target.parentElement.classList.contains('Space')) {
         this.display.textContent += ' ';
+      } else if(e.target.parentElement.classList.contains('Backspace')) {
+        this.display.textContent = this.display.textContent.slice(0, this.display.textContent.length - 1);
       }
     })
   }
