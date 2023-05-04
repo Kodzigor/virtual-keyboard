@@ -123,26 +123,24 @@ class Keyboard {
         if(!this.props.caps) {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
-
-          el.classList.add('hidden');
-            if(el.classList.contains('case-caps')) {
-              el.classList.remove('hidden');
-              this.props.caps = true;
-              this.capsLock.classList.add('active');
-              }
+            el.classList.add('hidden');
+              if(el.classList.contains('case-caps')) {
+                el.classList.remove('hidden');
+                this.props.caps = true;
+                this.capsLock.classList.add('active');
+                }
             })
           })
         } else {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-down')) {
+                el.classList.remove('hidden');
+                this.props.caps = false;
+                this.capsLock.classList.remove('active');
 
-          el.classList.add('hidden');
-            if(el.classList.contains('case-down')) {
-              el.classList.remove('hidden');
-              this.props.caps = false;
-              this.capsLock.classList.remove('active');
-
-              }
+                }
             })
           })
         }
@@ -152,17 +150,16 @@ class Keyboard {
 
     // Method handles with Shift keys
   handleShiftKey() {
-    this.shiftKey = document.querySelectorAll('.ShiftLeft, .ShiftRight');
-    console.log(this.shiftKey);
+    this.shiftKeys = document.querySelectorAll('.ShiftLeft, .ShiftRight');
 
-    this.shiftKey.forEach(shift => {
+    this.shiftKeys.forEach(shift => {
       shift.addEventListener('mousedown', () => {
         if(!this.props.caps) {
           this.keys.forEach(key => {
           Array.from(key.children).forEach(el => {
             el.classList.add('hidden');
               if(el.classList.contains('case-up')) {
-                el.classList.remove('hidden');true;
+                el.classList.remove('hidden');
                 shift.classList.add('active');
                 }
             })
@@ -177,7 +174,6 @@ class Keyboard {
                 }
             })
           })
-
         }
       })
 
@@ -202,7 +198,63 @@ class Keyboard {
                 }
             })
           })
+        }
+      })
+    })
 
+    document.addEventListener('keydown', (e) => {
+      console.log(e.code);
+      this.shiftKeys.forEach(shift => {
+        if(shift.classList.contains(e.code)) {
+          console.log('Hi');
+          if(!this.props.caps) {
+            this.keys.forEach(key => {
+            Array.from(key.children).forEach(el => {
+              el.classList.add('hidden');
+              if(el.classList.contains('case-up')) {
+                el.classList.remove('hidden');
+                shift.classList.add('active');
+                }
+              })
+            })
+          } else if(this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-capsShift')) {
+                el.classList.remove('hidden');
+                shift.classList.add('active');
+                }
+              })
+            })
+          }
+        }
+      })
+    })
+    document.addEventListener('keyup', (e) => {
+      this.shiftKeys.forEach(shift => {
+        if(shift.classList.contains(e.code)) {
+          if(!this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-down')) {
+                el.classList.remove('hidden');
+                shift.classList.remove('active');
+              }
+            })
+          })
+        } else if(this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-caps')) {
+                el.classList.remove('hidden');
+                shift.classList.remove('active');
+                }
+              })
+            })
+          }
         }
       })
     })
