@@ -28,9 +28,7 @@ class Keyboard {
     this.createKeyboardInner();
     this.setKeyboardLang();
     this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
-    // this.capsLockHandler();
-    // this.changeLanguageHandler('ControlLeft', 'AltLeft');
-    // this.handleClicksToKeyboard()
+    this.handleCapsLock();
   }
 
     // Method creates Keyboard display and keyboard
@@ -55,7 +53,7 @@ class Keyboard {
   }
 
 
-  // Method creates Keyboard keys
+    // Method creates Keyboard keys
   createKeyboardKeys(data, parentElement, lang) {
     data.forEach((element) => {
       let row = document.createElement('div');
@@ -85,90 +83,81 @@ class Keyboard {
     });
   }
 
-  // Method handles Caps Lock key
+    // Method handles Caps Lock key
+  handleCapsLock() {
+    this.capsLock = document.querySelector('.CapsLock');
+    this.keys = document.querySelectorAll('.char');
 
-  // capsLockHandler() {
-  //     let spans = document.querySelectorAll('.character > span > span');
-  //     let capsKey = document.querySelector('.CapsLock');
-  //     let abc = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхїфівапролджєячсмитьбюQWERTYUIOPASDFGHJKLZXCVBNMЙЦУКЕНГШЩЗХЇФІВАПРОЛДЖЄЯЧСМИТЬБЮ'.split('');
+      this.capsLock.addEventListener('click', () => {
+        if(!this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
 
-  //     capsKey.addEventListener('click', (e) => {
-  //             if(e.target.parentElement.classList.contains('CapsLock') && !capsKey.classList.contains('active')) {
-  //                 capsKey.classList.add('active')
-  //                 spans.forEach(span => {
-  //                     if(abc.includes(span.textContent)) {
-  //                         span.textContent = span.textContent.toUpperCase()
-  //                     }
-  //                 })
-  //             } else {
-  //                 capsKey.classList.remove('active')
-  //                 spans.forEach(span => {
-  //                     if(abc.includes(span.textContent)) {
-  //                         span.textContent = span.textContent.toLowerCase()
-  //                     }
-  //                 })
-  //             }
-  //         })
-  // }
+          el.classList.add('hidden');
+            if(el.classList.contains('case-caps')) {
+              el.classList.remove('hidden');
+              this.props.caps = true;
+              this.capsLock.classList.add('active');
+              }
+            })
+          })
+        } else {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+
+          el.classList.add('hidden');
+            if(el.classList.contains('case-down')) {
+              el.classList.remove('hidden');
+              this.props.caps = false;
+              this.capsLock.classList.remove('active');
+              }
+            })
+          })
+
+        }
+    })
+
+    document.addEventListener('keydown', (e) => {
+      if(e.code === 'CapsLock') {
+        if(!this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+
+          el.classList.add('hidden');
+            if(el.classList.contains('case-caps')) {
+              el.classList.remove('hidden');
+              this.props.caps = true;
+              this.capsLock.classList.add('active');
+              }
+            })
+          })
+        } else {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+
+          el.classList.add('hidden');
+            if(el.classList.contains('case-down')) {
+              el.classList.remove('hidden');
+              this.props.caps = false;
+              this.capsLock.classList.remove('active');
+
+              }
+            })
+          })
+        }
+      }
+    })
+  }
+
+
 
   // Method to handle Keyboard layout change
 
-  // changeLanguageHandler(...combination) {
-  //       let pressedKeys = new Set();
-  //       let chars = document.querySelectorAll('.character');
-  //       let nums = document.querySelectorAll('.number');
 
-  //       document.addEventListener('keydown', (e) => {
-  //           pressedKeys.add(e.code);
-
-  //           for (let code of combination) {
-  //               if(!pressedKeys.has(code)) {
-  //                   return
-  //               }
-  //           }
-
-  //           pressedKeys.clear();
-  //           chars.forEach(char => {
-  //               Array.from(char.children).forEach(child => {
-  //                   child.classList.toggle('hidden')
-  //               })
-  //           })
-  //           nums.forEach(num => {
-  //               Array.from(num.children).forEach(child => {
-  //                   child.classList.toggle('hidden')
-  //               })
-  //           })
-  //       })
-
-  //       document.addEventListener('keyup', (e) => {
-  //           pressedKeys.delete(e.code)
-  //       })
-  //   }
 
   // Method handles clicks to Keboard keys
 
-//   handleClicksToKeyboard() {
 
-//     this.keyboard.addEventListener('mousedown', (e) => {
-//         if( !e.target.parentElement.classList.contains('CapsLock')) {
-//             e.target.parentElement.classList.add('active')
-//         }
-//     })
-
-//     this.keyboard.addEventListener('mouseup', (e) => {
-//         if( !e.target.parentElement.classList.contains('CapsLock')) {
-//             e.target.parentElement.classList.remove('active')
-//         }
-//     })
-//     this.keyboard.addEventListener('click', (e) => {
-//         if( !e.target.parentElement.classList.contains('CapsLock')) {
-//             e.target.parentElement.classList.add('active')
-//             setTimeout(() => {
-//                 e.target.parentElement.classList.remove('active')
-//             }, 100)
-//         }
-//     })
-// }
 
 }
 
