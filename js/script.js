@@ -29,6 +29,7 @@ class Keyboard {
     this.setKeyboardLang();
     this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
     this.handleCapsLock();
+    this.handleShiftKey();
   }
 
     // Method creates Keyboard display and keyboard
@@ -149,15 +150,63 @@ class Keyboard {
     })
   }
 
+    // Method handles with Shift keys
+  handleShiftKey() {
+    this.shiftKey = document.querySelectorAll('.ShiftLeft, .ShiftRight');
+    console.log(this.shiftKey);
 
+    this.shiftKey.forEach(shift => {
+      shift.addEventListener('mousedown', () => {
+        if(!this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-up')) {
+                el.classList.remove('hidden');true;
+                shift.classList.add('active');
+                }
+            })
+          })
+        } else if(this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-capsShift')) {
+                el.classList.remove('hidden');
+                shift.classList.add('active');
+                }
+            })
+          })
 
-  // Method to handle Keyboard layout change
+        }
+      })
 
+      shift.addEventListener('mouseup', () => {
+        if(!this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-down')) {
+                el.classList.remove('hidden');
+                shift.classList.remove('active');
+                }
+            })
+          })
+        } else if(this.props.caps) {
+          this.keys.forEach(key => {
+          Array.from(key.children).forEach(el => {
+            el.classList.add('hidden');
+              if(el.classList.contains('case-caps')) {
+                el.classList.remove('hidden');
+                shift.classList.remove('active');
+                }
+            })
+          })
 
-
-  // Method handles clicks to Keboard keys
-
-
+        }
+      })
+    })
+  }
 
 }
 
