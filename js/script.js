@@ -29,10 +29,11 @@ class Keyboard {
     this.createKeyboardKeys(this.data, this.keyboard, this.currentLang.lang);
     this.handleCapsLock();
     this.handleShiftKey();
-    this.swithcKeyboardLanguage('ControlLeft', 'AltLeft')
+    this.swithcKeyboardLanguage('ControlLeft', 'AltLeft');
+    this.handleKeyboardKeysClick();
   }
 
-    // Method creates Keyboard display and keyboard
+  // Method creates Keyboard display and keyboard
   createKeyboardInner() {
     this.display = document.createElement('textarea');
     this.display.classList.add('display');
@@ -43,7 +44,7 @@ class Keyboard {
     this.body.append(this.keyboard);
   }
 
-    // Method sets Keyboard language
+  // Method sets Keyboard language
   setKeyboardLang() {
     this.currentLang = this.props.langs.find(lang => {
       if(lang.isCurrent) {
@@ -53,7 +54,7 @@ class Keyboard {
   }
 
 
-    // Method creates Keyboard keys
+  // Method creates Keyboard keys
   createKeyboardKeys(data, parentElement, lang) {
     data.forEach((element) => {
       let row = document.createElement('div');
@@ -84,7 +85,7 @@ class Keyboard {
     });
   }
 
-    // Method handles Caps Lock key
+  // Method handles Caps Lock key
   handleCapsLock() {
     this.capsLock = document.querySelector('.CapsLock');
     this.keys = document.querySelectorAll('.char');
@@ -148,7 +149,7 @@ class Keyboard {
     })
   }
 
-    // Method handles with Shift keys
+  // Method handles with Shift keys
   handleShiftKey() {
     this.shiftKeys = document.querySelectorAll('.ShiftLeft, .ShiftRight');
 
@@ -288,6 +289,22 @@ class Keyboard {
     document.addEventListener('keyup', (e) => {
             pressedKeys.delete(e.code)
         })
+  }
+
+  // Method handles clicks to Keyboard
+
+  handleKeyboardKeysClick() {
+    this.keyboard.addEventListener('mousedown', (e) => {
+      console.log(e.target);
+      if(!e.target.parentElement.classList.contains('CapsLock')) {
+         e.target.parentElement.classList.add('active')
+      }
+    })
+    this.keyboard.addEventListener('mouseup', (e) => {
+      if( !e.target.parentElement.classList.contains('CapsLock')) {
+          e.target.parentElement.classList.remove('active')
+      }
+    })
   }
 
 }
